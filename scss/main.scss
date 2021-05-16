@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.hero{
+    background: linear-gradient(#1d1d1e8c, #02020270, transparent), url("./images/hero-image.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 0;
+}
+
+.hero img{
+    width: 80%;
+}
+
+.nav-link {
+    font-size: 1.7rem;
+}
+
+.image-span img{
+    height: 400px;
+    width: 100%;
+}
+
+.fade-in-section{
+    text-align: center;
+}
+
+.two-col img{
+    width: 100%;
+}
+
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer ul{
+    list-style: none;
+}

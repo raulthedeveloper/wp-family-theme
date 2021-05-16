@@ -1,15 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>First Bond</title>
     <?php wp_head(  )?>
-</head>
-<body>
-   
-    <nav class="navbar navbar-expand-md navbar-light bg-light mb-5" role="navigation">
+  </head>
+  <body>
+    <div class="container-fluid">
+        <section class="hero">
+          
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark" role="navigation">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
@@ -30,4 +37,14 @@
         ?>
     </div>
 </nav>
-   
+
+
+
+              <div class="w-100 d-flex justify-content-center">
+                <img src="./images/Firstbond_logo.png" alt="">
+              </div>
+              
+        </section>
+
+        
+    </div>
