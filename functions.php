@@ -27,11 +27,16 @@ add_action( 'wp_enqueue_scripts', 'load_css' );
 add_action( 'wp_enqueue_scripts', 'load_js' );
 
 
+// Custom Image Size
+
+add_image_size( 'blog-large', 800, 600, false );
+add_image_size( 'blog-small', 300, 200, true );
 
 // Theme Options
 
 add_theme_support('menus'); 
 add_theme_support('post-thumbnails');
+add_theme_support('widgets');
 
 // Menus
 
@@ -49,3 +54,26 @@ function register_navwalker(){
 	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 }
 add_action( 'after_setup_theme', 'register_navwalker' );
+
+// Register Side Bar
+function my_sidebars(){
+    register_sidebar( 
+        array(
+            'name' => 'Page Sidebar',
+            'id' => 'page-sidebar',
+            'before_title' => '<h4 class="widget-title">',
+            'after_title' => '</h4>'
+        ) 
+        );
+
+        register_sidebar( 
+            array(
+                'name' => 'Blog Sidebar',
+                'id' => 'blog-sidebar',
+                'before_title' => '<h4 class="widget-title">',
+                'after_title' => '</h4>'
+            ) 
+            );
+};
+
+add_action( 'widgets_init', 'my_sidebars');

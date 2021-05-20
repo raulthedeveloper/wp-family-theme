@@ -26,6 +26,12 @@ section{
     width: 80%;
 }
 
+.contact-form{
+    background-color: #ececec;
+    padding: 2.5rem;
+    margin-top: 3rem;
+}
+
 .nav-link {
     font-size: 1.7rem;
 }
@@ -42,6 +48,20 @@ section{
 .two-col img{
     width: 100%;
 }
+
+
+.contact-squares{
+    background-color: #d3d3d370;
+    padding: 1.4rem;
+    height: 100%;
+}
+}
+
+.contact-squares ul{
+    list-style: none;
+}
+
+
 
 
 footer{
