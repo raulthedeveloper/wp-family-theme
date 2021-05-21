@@ -26,6 +26,44 @@ section{
     width: 80%;
 }
 
+.secondary-header{
+    background-color: black;
+    margin-bottom: 3rem;
+    padding-bottom: 0;
+    padding:2rem
+}
+
+.secondary-header img{
+    margin: auto;
+    display: block;
+}
+
+.secondary-nav{
+    background-color: #ffbd21;
+    color: white;
+    position: relative;
+    top: 4rem;
+    width: 70%;
+    margin: auto;
+
+}
+
+ 
+.nav-link{
+    color: rgb(255 255 255);
+}
+
+@media only screen and (max-width: 600px){
+    .secondary-nav{
+        width: 100%;
+        position: initial;
+    }
+
+}
+
+
+
+
 .contact-form{
     background-color: #ececec;
     padding: 2.5rem;
@@ -71,6 +109,10 @@ footer{
     margin-top: 2rem;
     display: flex;
     justify-content: space-around;
+    position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
 }
 
 footer ul{

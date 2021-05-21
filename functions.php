@@ -77,3 +77,41 @@ function my_sidebars(){
 };
 
 add_action( 'widgets_init', 'my_sidebars');
+
+
+///////// Custom Posts
+
+function event_post_type(){
+
+    $args = array(
+        'labels' => array(
+            'name' => 'Events',
+            'singular_name' => 'Event',
+        ),
+        'hierarchical' => true,
+        'public' => true,
+        'has_archive' => true,
+        'supports' => array('title','editor','thumbnail'),
+        'menu_icon' => 'dashicons-calendar-alt'
+    );
+
+    register_post_type('events', $args);
+}
+
+add_action('init','event_post_type' );
+
+
+/////////// Taxonomies ///////////
+
+function my_taxonomy(){
+
+    $arg = array(
+
+        'public' => true,
+        'hierarchical' => false,
+    );
+
+    register_taxonomy( 'family-events', array('events'),$args);
+}
+
+add_action( 'init', 'my_taxonomy' );
