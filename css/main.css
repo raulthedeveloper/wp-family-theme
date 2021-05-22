@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+
+svg{
+    color: #80682f;
+}
+
 section{
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -46,6 +51,16 @@ section{
     width: 70%;
     margin: auto;
 
+}
+
+
+.site-button{
+    background-color: #ffbd21;
+    width: 10rem;
+}
+
+.site-button:hover{
+    background-color: #ffb300;
 }
 
  
@@ -93,7 +108,7 @@ section{
     padding: 1.4rem;
     height: 100%;
 }
-}
+
 
 .contact-squares ul{
     list-style: none;
@@ -101,12 +116,23 @@ section{
 
 
 
+.social-media-container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    background: #f3f3f3;
+    border-bottom: 10px solid #ffbd21;
+}
+
+
+
+
 
 footer{
     background-color: black;
-    color: white;
+    
     padding: 2rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     display: flex;
     justify-content: space-around;
     position: relative;
@@ -115,6 +141,16 @@ footer{
    width: 100%;
 }
 
+
+
 footer ul{
     list-style: none;
+    
 }
+
+footer a{
+    text-decoration: none;
+    color: white;  
+}
+
+

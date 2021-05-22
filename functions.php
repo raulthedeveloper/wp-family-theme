@@ -43,7 +43,10 @@ add_theme_support('widgets');
 register_nav_menus( 
     array(
         'top-menu' => 'Top Menu Location',
-        'mobile-menu' => 'Mobile Menu Location'
+        'mobile-menu' => 'Mobile Menu Location',
+        'footer-col-1' => 'Footer Column 1',
+        'footer-col-2' => 'Footer Column 2',
+        'footer-col-3' => 'Footer Column 3'
     )
 );
 
@@ -115,3 +118,65 @@ function my_taxonomy(){
 }
 
 add_action( 'init', 'my_taxonomy' );
+
+
+/////// Contact Form ////////////
+
+
+function contact_form(){
+
+    /////////// Replace nonce info for you website to prevent security issues ///////////////
+    if( !wp_verify_nonce($_POST['nonce'],'ajax-nonce' )){
+        wp_send_json_error( "nonce is incorrect", 401 );
+        die();
+    }
+
+
+    $formdata = [];
+
+    wp_parse_str($_POST['contact'], $formdata);
+
+    $admin_email = get_option('admin_email');
+
+
+
+    $headers[] = 'Content-Type: text/html; charset-UTF-8';
+    $header[] = 'From: The First Bond <' . $admin_email . '>';
+    $headers[] = "Reply-to" . $formdata['email'];
+
+    $send_to = $admin_email;
+
+    $subject = "Enquiry from " . $formdata['first_name'] . " " . $formdata['last_name'];
+
+    $message = '';
+
+    foreach($formdata as $index => $field){
+        
+        $message .= '<strong>' . $index . '</strong>: ' . $field . '<br />' ;
+
+        
+    }
+
+    try{
+
+        if( wp_mail($send_to, $subject, $message, $headers))
+        {
+            wp_send_json_success( "Email sent" );
+        }
+       
+        else
+        {
+            wp_send_json_error("Email error");
+        }
+        
+    }
+
+    catch(Exception $e){
+        wp_send_json_error( $e->getMessage());
+    }
+
+    wp_send_json_success($formdata['fname']);
+}
+
+add_action( 'wp_ajax_contact','contact_form');
+add_action( 'wp_ajax_nopriv_contact','contact_form');
