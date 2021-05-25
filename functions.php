@@ -3,19 +3,35 @@
 // Load Css
 function load_css()
 {
+
+    
+
     wp_register_style( 'bootstrap', get_template_directory_uri(  ) . '/css/bootstrap.min.css', array(), false, 'all');
     wp_enqueue_style('bootstrap');
 
+    wp_register_style( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css', [] ,null, 'all' );
+    wp_enqueue_style('aos');
+
+    wp_register_style( 'sass', get_template_directory_uri(  ) . '/dist/app.css', [], 1, 'all' );
+    wp_enqueue_style( 'sass' );
+
     wp_register_style( 'main', get_template_directory_uri(  ) . '/css/main.css', array(), false, 'all');
-    wp_enqueue_style('bootstrap');
-    wp_enqueue_style('main');
+   
 }
 
 
 // Load Javascript
 function load_js()
 {
+   
+
     wp_enqueue_script('jquery');
+
+    wp_register_script( 'aosjs', 'https://unpkg.com/aos@2.3.1/dist/aos.js', [], null, true );
+    wp_enqueue_script( 'aosjs' );
+
+    wp_register_script( 'app', get_template_directory_uri(  ) . '/dist/app.js', ['jquery'], 1, true );
+    wp_enqueue_script('app');
 
     wp_register_script( 'bootstrap', get_template_directory_uri(  ) . '/js/bootstrap.min.js', 'jquery', false, true );
     wp_enqueue_script( 'bootstrap' );

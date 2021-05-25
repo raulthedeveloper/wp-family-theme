@@ -1,3 +1,6 @@
+<script>
+  AOS.init();
+</script>
 
 
 <footer>

@@ -1,0 +1,27 @@
+{
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "laravel-mix": "^6.0.19"
+  },
+  "scripts": {
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "production": "mix --production"
+  },
+  "name": "wp-family-theme",
+  "version": "1.0.0",
+  "description": "Wordpress theme",
+  "main": "webpack.mix.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raulthedeveloper/wp-family-theme.git"
+  },
+  "author": "Raul Rodriguez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raulthedeveloper/wp-family-theme/issues"
+  },
+  "homepage": "https://github.com/raulthedeveloper/wp-family-theme#readme"
+}

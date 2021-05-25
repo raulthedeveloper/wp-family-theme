@@ -17,7 +17,7 @@
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere neque modi consectetur id quam, ea libero sed at officiis harum? Error quibusdam sed possimus itaque ea eos! Veritatis, iste fugit!</p>
                 </div>
                 <div class="col-md-6 d-flex justify-content-center">
-                    <img src="<?php echo get_template_directory_uri(  ) . '/images/first-bond-1.jpeg'?>" alt="">
+                    <img src="<?php echo get_template_directory_uri(  ) ?>images/family-bonds.jpeg" alt="">
                 </div>
             </div>
         </div>
