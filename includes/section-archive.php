@@ -1,13 +1,25 @@
-<?php echo get_template_directory_uri(  ); ?>
 
 <?php if( have_posts() ): while( have_posts() ): the_post();?>
 
 
 
-<div class="card mb-3" >
+<div class="card mb-3 card-archive" >
   <div class="row g-0">
     <div class="col-md-4">
-    <img class="img-fluid"  src="<?php the_post_thumbnail_url(); ?>" alt="">
+
+    <?php if(has_post_thumbnail()): ?>
+
+      <img class="img-fluid"  src="<?php the_post_thumbnail_url(); ?>" alt="">
+
+   <?php endif?>
+
+   <?php if(!has_post_thumbnail()): ?>
+
+<img class="img-fluid"  src="https://eagle-sensors.com/wp-content/uploads/unavailable-image.jpg" alt="">
+
+<?php endif?>
+   
+    
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -18,14 +30,6 @@
     </div>
   </div>
 </div>
-
-
-
-
-  
-
-
-
 
 
 

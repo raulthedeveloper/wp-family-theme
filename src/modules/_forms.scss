@@ -1,0 +1,26 @@
+.contact-form{
+    background-color: #ececec;
+    padding: 2.5rem;
+    margin-top: 3rem;
+}
+
+.contact-squares textarea{
+    width: 100%;
+}
+
+.comment-form textarea{
+    margin-right: auto;
+    display: block;
+    width: 100%;
+}
+
+#submit{
+    background-color: #ffbd21;
+    width: 10rem;
+    border: none;
+    padding: .5rem;
+}
+
+#submit:hover{
+    background-color: #ffb300;
+}

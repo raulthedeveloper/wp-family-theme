@@ -1,7 +1,17 @@
+@use './modules/headers';
+@use './modules//footer';
+@use './modules/forms';
+
 *{
     margin: 0;
     padding: 0;
 }
+
+p{
+    font-size: 20px;
+}
+
+
 
 
 
@@ -47,6 +57,10 @@ section{
 .readmore{
     margin: 1rem;
     box-shadow: 0px 1px 15px 0px;
+}
+
+.readmore:hover{
+    box-shadow:  0px 1px 15px 5px;
 }
 
 .readmore img{
@@ -116,40 +130,7 @@ section{
     padding-right: 0;
 }
 
-.hero{
-    background: linear-gradient(#1d1d1e8c, #02020270, transparent), url("../images/hero-image.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    padding-top: 0;
-}
 
-.hero img{
-    width: 80%;
-}
-
-.secondary-header{
-    background-color: black;
-    margin-bottom: 3rem;
-    padding-bottom: 0;
-    padding:2rem
-}
-
-.secondary-header img{
-    margin: auto;
-    display: block;
-}
-
-.secondary-nav{
-    background-color: #ffbd21;
-    color: white;
-    position: relative;
-    top: 4rem;
-    width: 70%;
-    margin: auto;
-
-}
 
 
 .site-button{
@@ -181,42 +162,22 @@ section{
 
 
 
-.contact-form{
-    background-color: #ececec;
-    padding: 2.5rem;
-    margin-top: 3rem;
-}
 
-.contact-squares textarea{
+
+
+
+
+.image-span{
+    color: white;
+     img{
+    height: 500px;
     width: 100%;
-}
+     }
 
-.comment-form textarea{
-    margin-right: auto;
-    display: block;
-    width: 100%;
-}
 
-#submit{
-    background-color: #ffbd21;
-    width: 10rem;
-    border: none;
-    padding: .5rem;
-}
-
-#submit:hover{
-    background-color: #ffb300;
 }
 
 
-.nav-link {
-    font-size: 1.7rem;
-}
-
-.image-span img{
-    height: 400px;
-    width: 100%;
-}
 
 .fade-in-section{
     text-align: center;
@@ -249,36 +210,60 @@ section{
 }
 
 
+.card-img{
+    filter: brightness(0.5);
+    // max-height: 300px;
+
+    // &-overlay{
+    //     top:10rem
+    // }
+}
 
 
+.previous-button{
+    margin-left: 1rem;
+}
 
-footer{
-    background-color: black;
-    
-    padding: 2rem;
-    margin-top: 3rem;
+.next-button{
+    margin-right: 1rem;
+}
+
+
+.post-btn-container{
     display: flex;
-    justify-content: space-around;
-    position: relative;
-   left: 0;
-   bottom: 0;
-   width: 100%;
+    justify-content: space-between;
+    max-height: 40px;
 }
 
 
 
-footer ul{
+.tribe-common .tribe-common-c-btn, .tribe-common a.tribe-common-c-btn{
+    background-color: #ffb300;
+}
+
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+
+#calendar-2{
     list-style: none;
-    
 }
 
-footer a{
-    text-decoration: none;
-    color: white;  
+#wp-calendar{
+    width: 100%;
+}
+
+.card-archive:hover{
+    box-shadow: 0px 1px 15px 0px;
 }
 
 
 
-
-
-
+#loadingDiv{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}

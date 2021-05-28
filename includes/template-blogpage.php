@@ -19,8 +19,17 @@ Template Name:Blog Page
 
         foreach( $recent_posts as $post_item ) : ?>
 
-
+            <?php if(has_post_thumbnail()): ?>
             <?php echo get_the_post_thumbnail($post_item['ID'],'blog-large'); ?>
+
+            <?php endif?>
+
+            <?php if(!has_post_thumbnail()): ?>
+
+            <img class="img-fluid" src="<?php echo get_template_directory_uri() . "/images/unavailable-image.jpeg" ;?>
+" alt="">
+
+            <?php endif?>
 
 
             <?php endforeach?>
@@ -28,7 +37,9 @@ Template Name:Blog Page
             <div class="latest-post-text-box text-light">
                 <h2 class="text-light"><?php echo $post_item['post_title'] ?></h2>
                 <p><?php echo get_the_excerpt($post_item['ID']); ?></p>
-                <a class="btn btn-success" href="<?php echo get_permalink($post_item['ID']) ?>">Read More</a>
+                <a type="button" href="<?php echo get_permalink($post_item['ID']) ?>" class="btn btn-success">Read More
+                    <i class="fa fa-book"></i></a>
+
             </div>
 
         </div>
@@ -48,33 +59,39 @@ Template Name:Blog Page
     </div>
 
     <hr>
-    <div class="row">
-        <div>
-            <button class="previous-button">Previous</button>
-            <button class="next-button">Next</button>
-        </div>
 
-    </div>
     <div class="row mt-5">
         <h2 class="text-center">Most Recent Posts</h2>
-        <div class="d-flex flex-row" style="flex-wrap:wrap;min-height:400px" id="post_container">
 
-
-
+        <div class="post-btn-container">
+            <button type="button" class="btn btn-warning previous-button"><i
+                    class="fa fa-arrow-circle-left"></i>Previous</button>
+            <button type="button" class="btn btn-warning next-button">Next <i
+                    class="fa fa-arrow-circle-right"></i></button>
         </div>
 
-        <div class="row">
-            <div>
-                <button class="previous-button">Previous</button>
-                <button class="next-button">Next</button>
+
+
+        <div class="d-flex flex-row mt-4 mb-4" style="flex-wrap:wrap;min-height:600px" id="post_container">
+            <div id="loadingDiv">
+                <img width="200" src="<?php echo get_template_directory_uri() . "/images/loading-icon.gif" ;?>" alt="">
             </div>
 
+
         </div>
+        <div class="post-btn-container">
+            <button type="button" class="btn btn-warning previous-button"><i
+                    class="fa fa-arrow-circle-left"></i>Previous</button>
+            <button type="button" class="btn btn-warning next-button">Next <i
+                    class="fa fa-arrow-circle-right"></i></button>
+        </div>
+
 
 
 
     </div>
 
+    <?php echo get_template_directory_uri() . "/images/unavailable-image.jpeg" ;?>
 
 
 
@@ -91,112 +108,138 @@ Template Name:Blog Page
 
 
 <script>
-    let pageNumber = 1;
-    let homeUrl = "<?php echo home_url()?>"
+    (function ($) {
 
-    function togglePrevious(page) {
-        jQuery('.next-button').attr("disabled", false)
-        if (page === 1) {
-            jQuery('.previous-button').attr("disabled", true)
-        } else if (page > 1) {
-            jQuery('.previous-button').attr("disabled", false)
-        }
-
-
-    }
-
-    function toggleNext(elements, page) {
-        console.log(elements)
-        console.log(page)
+        let pageNumber = 1;
+        let homeUrl = "<?php echo home_url()?>"
+        let isLoading = false
 
 
 
-        if (elements === 6 && page === 3) {
-            jQuery('.next-button').attr("disabled", true)
-        }
-
-
-
-        if (elements < 6 || page > 3) {
-            jQuery('.next-button').attr("disabled", true)
-        } else {
-            jQuery('.next-button').attr("disabled", false)
-        }
-    }
-
-
-
-    jQuery(document).ready(() => {
-
-        togglePrevious(1)
-
-        /////////// Next Button /////////////
-
-        jQuery('.next-button').click(() => {
-            pageNumber += 1
-            togglePrevious(pageNumber)
-
-            jQuery('#post_container').empty()
-
-           
-
-            jQuery.get(homeUrl + '/wp-json/wp/v2/posts?per_page=6&page=' + pageNumber, function (data) {
-                console.log(data)
-                toggleNext(Object.keys(data).length, pageNumber)
-
-                data.forEach(e => {
-                    jQuery('#post_container').append(
-                        `<div class="col-md-4 col-sm-12"> <div class="readmore"><div class="readmore-cap"><img src="${e.featured_media_src_url}" alt=""></div><div class="readmore-footer bg-dark text-light p-3"><h5 class="slider-caption-class">${e.title.rendered}</h5><div class="card-excerpt">${e.excerpt.rendered}</div><a class="btn btn-success" href="${e.link}">Read More</a></div></div></div>`
-                    )
-
+        function loading() {
+            var $loading = $('#loadingDiv').hide();
+            $(document)
+                .ajaxStart(function () {
+                    loading = true
+                    console.log('started')
+                    $loading.show();
                 })
+                .ajaxStop(function () {
+                    loading = false
+                    console.log('stopped')
+                    $loading.hide();
+                });
+
+        }
 
 
-            });
+
+
+        function togglePrevious(page) {
+            $('.next-button').attr("disabled", false)
+            if (page === 1) {
+                $('.previous-button').attr("disabled", true)
+            } else if (page > 1) {
+                $('.previous-button').attr("disabled", false)
+            }
+
+
+        }
+
+        function toggleNext(elements, page) {
+
+            if (elements === 6 && page === 3) {
+                $('.next-button').attr("disabled", true)
+            }
+
+
+
+            if (elements < 6 || page > 3) {
+                $('.next-button').attr("disabled", true)
+            } else {
+                $('.next-button').attr("disabled", false)
+            }
+        }
+
+
+
+/////// Calls Out to WP REST for AJAX //////////////////////
+        function wpApiCall(){
+            $.get(homeUrl + '/wp-json/wp/v2/posts?per_page=6&page=' + pageNumber,
+                    function (data) {
+
+                        toggleNext(Object.keys(data).length, pageNumber)
+
+
+                        data.forEach(e => {
+                            if (e.featured_media_src_url) {
+                                $('#post_container').append(
+                                    `<div class="col-md-4 col-sm-12"> <div class="readmore"><div class="readmore-cap"><img src="${e.featured_media_src_url}" alt=""></div><div class="readmore-footer bg-dark text-light p-3"><h5 class="slider-caption-class">${e.title.rendered}</h5><div class="card-excerpt">${e.excerpt.rendered}</div><a class="btn btn-success" href="${e.link}">Read More</a></div></div></div>`
+                                )
+                            } else {
+                                $('#post_container').append(
+                                    `<div class="col-md-4 col-sm-12"> <div class="readmore"><div class="readmore-cap"><img src="<?php echo get_template_directory_uri() . "/images/unavailable-image.jpeg" ;?>
+ alt=""></div><div class="readmore-footer bg-dark text-light p-3"><h5 class="slider-caption-class">${e.title.rendered}</h5><div class="card-excerpt">${e.excerpt.rendered}</div><a class="btn btn-success" href="${e.link}">Read More</a></div></div></div>`
+                                )
+                            }
+
+
+                        })
+
+
+                    });
             
+        }
+
+
+
+
+
+        $(document).ready(() => {
+            togglePrevious(1)
+
+            /////////// Next Button /////////////
+
+            $('.next-button').click(() => {
+                pageNumber += 1
+                togglePrevious(pageNumber)
+
+                $('#post_container').empty()
+
+
+                wpApiCall()
+                
+
+            })
+
+
+            /////// Previous Button ///////////
+
+            $('.previous-button').click(() => {
+
+                pageNumber -= 1
+                togglePrevious(pageNumber)
+
+
+                $('#post_container').empty()
+
+
+
+                wpApiCall()
+
+
+            })
         })
 
+    //////////////// Intial API call to get WP Posts /////////////
 
-        /////// Previous Button ///////////
 
-        jQuery('.previous-button').click(() => {
-            pageNumber -= 1
-            togglePrevious(pageNumber)
+        wpApiCall()
 
 
 
 
-            jQuery('#post_container').empty()
-
-            
-
-            jQuery.get(homeUrl + '/wp-json/wp/v2/posts?per_page=6&page=' + pageNumber, function (data) {
-                data.forEach(e => {
-                    jQuery('#post_container').append(
-                        `<div class="col-md-4 col-sm-12"> <div class="readmore"><div class="readmore-cap"><img src="${e.featured_media_src_url}" alt=""></div><div class="readmore-footer bg-dark text-light p-3"><h5 class="slider-caption-class">${e.title.rendered}</h5><div class="card-excerpt">${e.excerpt.rendered}</div><a class="btn btn-success" href="${e.link}">Read More</a></div></div></div>`
-                    )
-
-                })
-
-
-            });
-
-            
-        })
-    })
-
-
-    jQuery.get(homeUrl + '/wp-json/wp/v2/posts?per_page=6&page=' + pageNumber, function (data) {
-
-        data.forEach(e => {
-            jQuery('#post_container').append(
-                `<div class="col-md-4 col-sm-12"> <div class="readmore"><div class="readmore-cap"><img src="${e.featured_media_src_url}" alt=""></div><div class="readmore-footer bg-dark text-light p-3"><h5 class="slider-caption-class">${e.title.rendered}</h5><div class="card-excerpt">${e.excerpt.rendered}</div><a class="btn btn-success" href="${e.link}">Read More</a></div></div></div>`
-            )
-
-        })
-
-
-    });
+    })(jQuery)
 </script>
 
 <?php get_footer() ?>

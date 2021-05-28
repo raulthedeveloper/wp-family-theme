@@ -16,10 +16,10 @@
         <section class="hero">
           
 
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark" role="navigation">
+  <nav class="navbar navbar-expand-md navbar-dark " style="background:#21252900" role="navigation">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
+    <button class="navbar-toggler justify-content-center" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
         <span class="navbar-toggler-icon"></span>
     </button>
         <?php
@@ -38,11 +38,11 @@
 </nav>
 
 
-
-              <div class="w-100 d-flex justify-content-center">
-                <img src="./images/Firstbond_logo.png" alt="">
-              </div>
+              <div class="w-100 h-50 d-flex justify-content-center ">
+                <img class="mb-0" src="<?php echo get_template_directory_uri().'/images/Firstbondlogo.png'; ?>">
               
+              </div>
+              <h3 class="text-light text-center">Promoting Strong Families</h3>
         </section>
 
         

@@ -4,7 +4,8 @@
 function load_css()
 {
 
-    
+    wp_register_style('font-awesome',"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css",array(),false,'all');
+    wp_enqueue_style('font-awesome') ;   
 
     wp_register_style( 'bootstrap', get_template_directory_uri(  ) . '/css/bootstrap.min.css', array(), false, 'all');
     wp_enqueue_style('bootstrap');
@@ -16,6 +17,7 @@ function load_css()
     wp_enqueue_style( 'sass' );
 
     wp_register_style( 'main', get_template_directory_uri(  ) . '/css/main.css', array(), false, 'all');
+    wp_enqueue_style('main');
    
 }
 
@@ -100,40 +102,40 @@ add_action( 'widgets_init', 'my_sidebars');
 
 ///////// Custom Posts
 
-function event_post_type(){
+// function event_post_type(){
 
-    $args = array(
-        'labels' => array(
-            'name' => 'Events',
-            'singular_name' => 'Event',
-        ),
-        'hierarchical' => true,
-        'public' => true,
-        'has_archive' => true,
-        'supports' => array('title','editor','thumbnail'),
-        'menu_icon' => 'dashicons-calendar-alt'
-    );
+//     $args = array(
+//         'labels' => array(
+//             'name' => 'Events',
+//             'singular_name' => 'Event',
+//         ),
+//         'hierarchical' => true,
+//         'public' => true,
+//         'has_archive' => true,
+//         'supports' => array('title','editor','thumbnail'),
+//         'menu_icon' => 'dashicons-calendar-alt'
+//     );
 
-    register_post_type('events', $args);
-}
+//     register_post_type('events', $args);
+// }
 
-add_action('init','event_post_type' );
+// add_action('init','event_post_type' );
 
 
 /////////// Taxonomies ///////////
 
-function my_taxonomy(){
+// function my_taxonomy(){
 
-    $arg = array(
+//     $arg = array(
 
-        'public' => true,
-        'hierarchical' => false,
-    );
+//         'public' => true,
+//         'hierarchical' => false,
+//     );
 
-    register_taxonomy( 'family-events', array('events'),$args);
-}
+//     register_taxonomy( 'family-events', array('events'),$args);
+// }
 
-add_action( 'init', 'my_taxonomy' );
+// add_action( 'init', 'my_taxonomy' );
 
 
 /////// Contact Form ////////////

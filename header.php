@@ -10,7 +10,7 @@
 <body>
 
     <section class="secondary-header">
-    <img class="img-fluid" src="<?php echo get_template_directory_uri(). '/images/Firstbond_logo.png' ?>" alt="">
+    <img class="img-fluid" src="<?php echo get_template_directory_uri(). '/images/Firstbondlogo.png' ?>" alt="">
     <nav class="navbar navbar-expand-md navbar-light secondary-nav" role="navigation">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
