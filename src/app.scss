@@ -161,7 +161,10 @@ section{
 }
 
 
-
+.fade-in-section{
+    padding: 1em;
+    min-height: 300px;
+}
 
 
 
@@ -266,4 +269,9 @@ section{
     width: 100%;
     margin: auto;
     text-align: center;
+}
+
+
+.carousel-item img{
+    max-height: 450px;
 }

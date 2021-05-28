@@ -23,6 +23,17 @@
   font-size: 1.7rem;
 }
 
+.not-found-page {
+  height: 70vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.not-found-page .display-1 {
+  font-size: 10rem;
+}
+
 footer {
   background-color: black;
   padding: 2rem;
@@ -211,6 +222,11 @@ section {
   overflow: hidden;
 }
 
+.fade-in-section {
+  padding: 1em;
+  min-height: 300px;
+}
+
 .image-span {
   color: white;
 }
@@ -288,4 +304,8 @@ section {
   width: 100%;
   margin: auto;
   text-align: center;
+}
+
+.carousel-item img {
+  max-height: 450px;
 }

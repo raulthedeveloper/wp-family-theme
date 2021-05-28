@@ -37,9 +37,9 @@
 
    
 
-    <section class="fade-in-section bg-light p-5">
-        <div class="container">
-            <div class="row">
+    <section class="fade-in-section bg-light">
+        <div class="container mt-4">
+            <div class="row ">
                 <h2>Our Vision</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, odit sint obcaecati atque eum eos neque quod commodi delectus architecto deleniti magnam, doloremque quo nostrum aperiam illum ex vel consequuntur?</p>
             </div>
