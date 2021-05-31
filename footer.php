@@ -1,6 +1,3 @@
-<script>
-  AOS.init();
-</script>
 
 
 <footer>
@@ -36,5 +33,13 @@
     </footer>
 
 <?php wp_footer(  )?>
+
+<script>
+  
+AOS.init({
+   once: true
+})
+</script>
+
 </body>
 </html>

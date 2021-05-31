@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <section class="secondary-header">
+    <section class="secondary-header" pt-0>
     <img class="img-fluid" src="<?php echo get_template_directory_uri(). '/images/Firstbondlogo.png' ?>" alt="">
     <nav class="navbar navbar-expand-md navbar-light secondary-nav" role="navigation">
   <div class="container">

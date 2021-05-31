@@ -8,7 +8,7 @@ Template Name: Contact Us
 <div class="container">
 
     <div class="row d-flex">
-        <div class="col-md-4 col-sm-13 mb-3" id="left-contact-square">
+        <div class="col-md-4 col-sm-13 mb-3" data-aos="fade-in" data-aos-duration="2000" id="left-contact-square">
             <div class="contact-squares">
                 <h4>Mailing Address</h4>
                 <ul>
@@ -19,7 +19,7 @@ Template Name: Contact Us
             </div>
         </div>
 
-        <div class="col-md-4 col-sm-13 mb-3">
+        <div class="col-md-4 col-sm-13 mb-3" data-aos="fade-in" data-aos-duration="2000">
         <div class="contact-squares">
                 <h4>Email Address</h4>
                 <ul>
@@ -28,7 +28,7 @@ Template Name: Contact Us
             </div>
         </div>
 
-        <div class="col-md-4 col-sm-13 mb-3" id="right-contact-square">
+        <div class="col-md-4 col-sm-13 mb-3" id="right-contact-square" data-aos="fade-in" data-aos-duration="2000">
         <div class="contact-squares">
                 <h4>Mailing Address</h4>
                 <ul>

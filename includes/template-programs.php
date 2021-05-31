@@ -7,7 +7,7 @@ Template Name: Programs
 
 <?php get_header() ?>
 <div class="container">
-    <div class="row">
+    <div class="row" style="margin-bottom:4rem">
    
 
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -49,8 +49,11 @@ Template Name: Programs
   </button>
 </div>
 </div>
+</div>
 
-<div class="row mt-5 mb-5">
+<section class="light-grey-section">
+<div class="container">
+<div class="row" data-aos="fade-up">
     <div class="col-md-6 col-sm-12">
         <img class="img-fluid" src="https://images.pexels.com/photos/681391/pexels-photo-681391.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
     </div>
@@ -58,27 +61,110 @@ Template Name: Programs
     <div class="col-md-6 col-sm-12">
         <h2>Section</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laborum odio quas minus facilis adipisci animi voluptatibus corporis, similique quae architecto dolore magnam quidem sint vitae? Quibusdam earum maiores enim?</p>
+        <button  class="site-button d-block">Call To Action</button>
+
     </div>
 </div>
+</section>
 
 
-<div class="row ">
+<section>
+<div class="container">
+<div class="row" data-aos="fade-up">
     <div class="col-md-6 col-sm-12">
     <h2>Section</h2>
 
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laborum odio quas minus facilis adipisci animi voluptatibus corporis, similique quae architecto dolore magnam quidem sint vitae? Quibusdam earum maiores enim?</p>
+    <button  class="site-button d-block">Call To Action</button>
 
     </div>
+
 
     <div class="col-md-6 col-sm-12">
     <img class="img-fluid" src="https://images.pexels.com/photos/681391/pexels-photo-681391.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
 
     </div>
 </div>
+</div>
+</section>
+
+<section class="light-grey-section">
+<div class="container">
+<div class="row" data-aos="fade-up">
+    <div class="col-md-6 col-sm-12">
+        <img class="img-fluid" src="https://images.pexels.com/photos/681391/pexels-photo-681391.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+        <h2>Section</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laborum odio quas minus facilis adipisci animi voluptatibus corporis, similique quae architecto dolore magnam quidem sint vitae? Quibusdam earum maiores enim?</p>
+        <button  class="site-button d-block">Call To Action</button>
+
+    </div>
+</div>
+</section>
+
+
+<section>
+<div class="container">
+<div class="row" data-aos="fade-up">
+    <div class="col-md-6 col-sm-12">
+    <h2>Section</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laborum odio quas minus facilis adipisci animi voluptatibus corporis, similique quae architecto dolore magnam quidem sint vitae? Quibusdam earum maiores enim?</p>
+    <button  class="site-button d-block">Call To Action</button>
+
+    </div>
+
+
+    <div class="col-md-6 col-sm-12">
+    <img class="img-fluid" src="https://images.pexels.com/photos/681391/pexels-photo-681391.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+
+    </div>
+</div>
+</div>
+</section>
+
+<section class="light-grey-section">
+<div class="container">
+<div class="row" data-aos="fade-up">
+    <div class="col-md-6 col-sm-12">
+        <img class="img-fluid" src="https://images.pexels.com/photos/681391/pexels-photo-681391.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+        <h2>Section</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laborum odio quas minus facilis adipisci animi voluptatibus corporis, similique quae architecto dolore magnam quidem sint vitae? Quibusdam earum maiores enim?</p>
+        <button  class="site-button d-block">Call To Action</button>
+
+    </div>
+</div>
+</section>
+
+
+<section>
+<div class="container">
+<div class="row" data-aos="fade-up">
+    <div class="col-md-6 col-sm-12">
+    <h2>Section</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laborum odio quas minus facilis adipisci animi voluptatibus corporis, similique quae architecto dolore magnam quidem sint vitae? Quibusdam earum maiores enim?</p>
+    <button  class="site-button d-block">Call To Action</button>
+
+    </div>
+
+
+    <div class="col-md-6 col-sm-12">
+    <img class="img-fluid" src="https://images.pexels.com/photos/681391/pexels-photo-681391.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+
+    </div>
+</div>
+</div>
+</section>
+
 
 
 </div>
 
-I am the programs template
 
 <?php get_footer(); ?>

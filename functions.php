@@ -22,6 +22,18 @@ function load_css()
 }
 
 
+    
+function add_aos_animation() {
+    wp_enqueue_style('AOS_animate', 'https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css', false, null);
+    wp_enqueue_script('AOS', 'https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js', false, null, true);
+    // wp_enqueue_script('theme-js', get_template_directory_uri() . '/js/theme.js', array( 'AOS' ), null, true);
+}
+
+add_action( 'wp_enqueue_scripts', 'add_aos_animation' );
+
+
+
+
 // Load Javascript
 function load_js()
 {
@@ -29,9 +41,7 @@ function load_js()
 
     wp_enqueue_script('jquery');
 
-    wp_register_script( 'aosjs', 'https://unpkg.com/aos@2.3.1/dist/aos.js', [], null, true );
-    wp_enqueue_script( 'aosjs' );
-
+ 
     wp_register_script( 'app', get_template_directory_uri(  ) . '/dist/app.js', ['jquery'], 1, true );
     wp_enqueue_script('app');
 

@@ -2,6 +2,9 @@
 @use './modules//footer';
 @use './modules/forms';
 
+$section-padding: 6rem;
+$section-margin: 2rem;
+
 *{
     margin: 0;
     padding: 0;
@@ -11,7 +14,12 @@ p{
     font-size: 20px;
 }
 
+section{
+   
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
 
+}
 
 
 
@@ -19,10 +27,7 @@ svg{
     color: #80682f;
 }
 
-section{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
+
 
 .widget_archive{
     list-style: none;
@@ -274,4 +279,9 @@ section{
 
 .carousel-item img{
     max-height: 450px;
+}
+
+
+.light-grey-section{
+    background: #dcdcdc52;
 }

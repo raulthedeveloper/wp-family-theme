@@ -91,13 +91,13 @@ p {
   font-size: 20px;
 }
 
-svg {
-  color: #80682f;
+section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
-section {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+svg {
+  color: #80682f;
 }
 
 .widget_archive {
@@ -308,4 +308,8 @@ section {
 
 .carousel-item img {
   max-height: 450px;
+}
+
+.light-grey-section {
+  background: #dcdcdc52;
 }

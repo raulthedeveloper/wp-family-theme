@@ -1,7 +1,7 @@
 
 
 
-<form class="contact-form" id="contact">
+<form class="contact-form" id="contact" data-aos="fade-up" data-aos-duration="2000">
 <div id="success_message" class="alert alert-success" style="display:none"></div>
 <div id="fail_message" class="alert alert-danger" style="display:none"></div>
 
