@@ -5,9 +5,15 @@ Template Name:Blog Page
 
 ?>
 
+<!-- Blog Template -->
+
 <?php get_header() ?>
 
 <div class="container">
+
+<div>
+
+
 
     <div class="row mb-5" data-aos="fade-in">
         <div class="col-md-8 col-sm-12 latest-post" style="max-height:500px">
@@ -58,6 +64,8 @@ Template Name:Blog Page
 
     </div>
 
+    </div>
+
     <hr>
 
     <div class="row mt-5" >
@@ -91,7 +99,6 @@ Template Name:Blog Page
 
     </div>
 
-    <?php echo get_template_directory_uri() . "/images/unavailable-image.jpeg" ;?>
 
 
 

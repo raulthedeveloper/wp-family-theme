@@ -1,8 +1,7 @@
 <?php if( have_posts() ): while( have_posts() ): the_post();?>
 <h1 class="text-center"><?php echo single_cat_title(); ?></h1>
 
-
-
+<!-- section-blogcontent -->
 
 
 <br>
