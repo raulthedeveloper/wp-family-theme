@@ -20,7 +20,7 @@ Template Name: About Us
         <div class="col-md-5 col-sm-12">
             <?php if(has_post_thumbnail()): ?>
 
-            <img class="img-fluid" src="<?php the_post_thumbnail_url(); ?>" alt="">
+            <img class="img-fluid w-100" src="<?php the_post_thumbnail_url(); ?>" alt="">
 
             <div class="social-media-container">
                 <a target="_blank" href="https://www.facebook.com/">

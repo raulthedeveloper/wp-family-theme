@@ -25,15 +25,19 @@ Template Name:Blog Page
 
         foreach( $recent_posts as $post_item ) : ?>
 
-            <?php if(has_post_thumbnail()): ?>
+            <?php if(has_post_thumbnail()): 
+                echo "has thumbnail";
+                ?>
             <?php echo get_the_post_thumbnail($post_item['ID'],'blog-large'); ?>
 
             <?php endif?>
 
-            <?php if(!has_post_thumbnail()): ?>
+            <?php if(!has_post_thumbnail()): 
+                echo "doesnt have thumbnail";
+                ?>
 
             <img class="img-fluid" src="<?php echo get_template_directory_uri() . "/images/unavailable-image.jpeg" ;?>
-" alt="">
+" alt="unavailable image">
 
             <?php endif?>
 
@@ -184,7 +188,6 @@ Template Name:Blog Page
                                     `<div data-aos="fade-up" data-aos-duration="1500" class="col-md-4 col-sm-12"> <div class="readmore"><div class="readmore-cap"><img src="${e.featured_media_src_url}" alt=""></div><div class="readmore-footer bg-dark text-light p-3"><h5 data-aos="fade-in" class="slider-caption-class" data-aos-duration="500">${e.title.rendered}</h5><div data-aos="fade-in" data-aos-duration="500" class="card-excerpt">${e.excerpt.rendered}</div><a data-aos="fade-in" data-aos-duration="500" class="btn btn-success" href="${e.link}">Read More</a></div></div></div>`
                                 )
                             } else {
-                                console.log('the else ran')
                                 $('#post_container').append(
                                     `<div data-aos="fade-up" data-aos-duration="1500"  class="col-md-4 col-sm-12"> <div class="readmore"><div class="readmore-cap"><img src="<?php echo get_template_directory_uri() . "/images/unavailable-image.jpeg" ;?>"
  alt=""></div><div class="readmore-footer bg-dark text-light p-3"><h5 data-aos="fade-in" data-aos-duration="500" class="slider-caption-class">${e.title.rendered}</h5><div class="card-excerpt" data-aos="fade-in" data-aos-duration="500">${e.excerpt.rendered}</div><a data-aos="fade-in" data-aos-duration="500" class="btn btn-success" href="${e.link}">Read More</a></div></div></div>`

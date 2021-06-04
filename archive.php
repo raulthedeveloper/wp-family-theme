@@ -3,9 +3,12 @@
 <h1 class="text-center"><?php echo single_cat_title(); ?></h1>
 <?php get_template_part('includes/section','archive' ); ?>
 
+<div class="d-flex justify-content-between mt-5">
 <?php  previous_posts_link(); ?>
 
  <?php  next_posts_link(); ?>
+</div>
+
 </div>
 
 

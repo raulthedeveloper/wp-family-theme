@@ -25,7 +25,10 @@
       <div class="card-body">
         <h5 class="card-title"><?php the_title() ?></h5>
         <p class="card-text"><?php the_excerpt(); ?></p>
-        <a href="<?php the_permalink(); ?>">Read More</a>
+
+        <a type="button" href="<?php the_permalink(); ?>" class="btn btn-success">Read More
+                    <i class="fa fa-book"></i></a>
+
       </div>
     </div>
   </div>

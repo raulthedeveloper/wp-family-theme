@@ -4,6 +4,19 @@ Template Name: Programs
 */
 ?>
 
+<?php 
+
+$section1 = get_field('section_1');
+$section2 = nl2br(get_field('section_2'));
+$section3 = get_field('section_3');
+$section4 = nl2br(get_field('section_4'));
+$section5 = get_field('section_5');
+$section6 = get_field('section_6');
+
+
+
+?>
+
 
 <?php get_header() ?>
 <div class="container">
@@ -15,29 +28,53 @@ Template Name: Programs
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-    <img src="https://images.pexels.com/photos/2086748/pexels-photo-2086748.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="d-block w-100" alt="...">
+    <img src="<?php echo get_field('slide_1'); ?>" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+      <?php echo get_field('slide_1_excerpt'); ?>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="d-block w-100" alt="...">
+    <img src="<?php echo get_field('slide_2'); ?>" class="d-block w-100" alt="...">
+
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+      <?php echo get_field('slide_2_excerpt'); ?>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="https://images.pexels.com/photos/681391/pexels-photo-681391.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="d-block w-100" alt="...">
+    <img src="<?php echo get_field('slide_3'); ?>" class="d-block w-100" alt="...">
+
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+      <?php echo get_field('slide_3_excerpt'); ?>
       </div>
     </div>
+    <div class="carousel-item">
+    <img src="<?php echo get_field('slide_4'); ?>" class="d-block w-100" alt="...">
+
+      <div class="carousel-caption d-none d-md-block">
+      <?php echo get_field('slide_4_excerpt'); ?>
+      </div>
+    </div>
+    <div class="carousel-item">
+    <img src="<?php echo get_field('slide_5'); ?>" class="d-block w-100" alt="...">
+
+      <div class="carousel-caption d-none d-md-block">
+      <?php echo get_field('slide_5_excerpt'); ?>
+      </div>
+    </div>
+    <div class="carousel-item">
+    <img src="<?php echo get_field('slide_6'); ?>" class="d-block w-100" alt="...">
+
+      <div class="carousel-caption d-none d-md-block">
+      <?php echo get_field('slide_6_excerpt'); ?>
+      </div>
+    </div>
+    
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -55,13 +92,11 @@ Template Name: Programs
 <div class="container">
 <div class="row" data-aos="fade-up">
     <div class="col-md-6 col-sm-12">
-        <img class="img-fluid" src="https://images.pexels.com/photos/681391/pexels-photo-681391.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+        <img class="img-fluid" src="<?php echo get_field('section_1_image') ?>" alt="">
     </div>
 
     <div class="col-md-6 col-sm-12">
-        <h2>Section</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laborum odio quas minus facilis adipisci animi voluptatibus corporis, similique quae architecto dolore magnam quidem sint vitae? Quibusdam earum maiores enim?</p>
-        <button  class="site-button d-block">Call To Action</button>
+        <?php echo $section1 ?>
 
     </div>
 </div>
@@ -72,16 +107,14 @@ Template Name: Programs
 <div class="container">
 <div class="row" data-aos="fade-up">
     <div class="col-md-6 col-sm-12">
-    <h2>Section</h2>
-
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laborum odio quas minus facilis adipisci animi voluptatibus corporis, similique quae architecto dolore magnam quidem sint vitae? Quibusdam earum maiores enim?</p>
+    <?php echo $section2 ?>
     <button  class="site-button d-block">Call To Action</button>
 
     </div>
 
 
     <div class="col-md-6 col-sm-12">
-    <img class="img-fluid" src="https://images.pexels.com/photos/681391/pexels-photo-681391.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+    <img class="img-fluid" src="<?php echo get_field('section_2_image') ?>" alt="">
 
     </div>
 </div>
@@ -92,12 +125,11 @@ Template Name: Programs
 <div class="container">
 <div class="row" data-aos="fade-up">
     <div class="col-md-6 col-sm-12">
-        <img class="img-fluid" src="https://images.pexels.com/photos/681391/pexels-photo-681391.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+        <img class="img-fluid" src="<?php echo get_field('section_3_image') ?>" alt="">
     </div>
 
     <div class="col-md-6 col-sm-12">
-        <h2>Section</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laborum odio quas minus facilis adipisci animi voluptatibus corporis, similique quae architecto dolore magnam quidem sint vitae? Quibusdam earum maiores enim?</p>
+    <?php echo $section3 ?>
         <button  class="site-button d-block">Call To Action</button>
 
     </div>
@@ -109,16 +141,14 @@ Template Name: Programs
 <div class="container">
 <div class="row" data-aos="fade-up">
     <div class="col-md-6 col-sm-12">
-    <h2>Section</h2>
-
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laborum odio quas minus facilis adipisci animi voluptatibus corporis, similique quae architecto dolore magnam quidem sint vitae? Quibusdam earum maiores enim?</p>
+    <?php echo $section4 ?>
     <button  class="site-button d-block">Call To Action</button>
 
     </div>
 
 
     <div class="col-md-6 col-sm-12">
-    <img class="img-fluid" src="https://images.pexels.com/photos/681391/pexels-photo-681391.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+    <img class="img-fluid" src="<?php echo get_field('section_4_image') ?>" alt="">
 
     </div>
 </div>
@@ -129,12 +159,11 @@ Template Name: Programs
 <div class="container">
 <div class="row" data-aos="fade-up">
     <div class="col-md-6 col-sm-12">
-        <img class="img-fluid" src="https://images.pexels.com/photos/681391/pexels-photo-681391.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+        <img class="img-fluid" src="<?php echo get_field('section_5_image') ?>" alt="">
     </div>
 
     <div class="col-md-6 col-sm-12">
-        <h2>Section</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laborum odio quas minus facilis adipisci animi voluptatibus corporis, similique quae architecto dolore magnam quidem sint vitae? Quibusdam earum maiores enim?</p>
+    <?php echo $section5 ?>
         <button  class="site-button d-block">Call To Action</button>
 
     </div>
@@ -146,16 +175,14 @@ Template Name: Programs
 <div class="container">
 <div class="row" data-aos="fade-up">
     <div class="col-md-6 col-sm-12">
-    <h2>Section</h2>
-
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laborum odio quas minus facilis adipisci animi voluptatibus corporis, similique quae architecto dolore magnam quidem sint vitae? Quibusdam earum maiores enim?</p>
+    <?php echo $section6 ?>
     <button  class="site-button d-block">Call To Action</button>
 
     </div>
 
 
     <div class="col-md-6 col-sm-12">
-    <img class="img-fluid" src="https://images.pexels.com/photos/681391/pexels-photo-681391.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+    <img class="img-fluid" src="<?php echo get_field('section_6_image') ?>" alt="">
 
     </div>
 </div>
