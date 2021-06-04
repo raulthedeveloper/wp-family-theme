@@ -107,16 +107,6 @@ Template Name:Blog Page
 
 
 </div>
-<!-- 
-<div class="date-box">
-                                <span>09</span>
-                                <hr>
-                                <span>Feb</span>
-                                <br>
-                                <span>2021</span>
-                            </div>  -->
-
-
 
 <script>
     (function ($) {
@@ -173,23 +163,43 @@ Template Name:Blog Page
         }
 
 
+        function convertToMonth(string){
+            const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+            const stringArr = string.split("")
+
+            if(stringArr[0] == "0"){
+                return months[parseInt(stringArr[1]) - 1];
+            
+            }
+        }
+
 
 /////// Calls Out to WP REST for AJAX //////////////////////
         function wpApiCall(){
+            
+
             $.get(homeUrl + '/wp-json/wp/v2/posts?per_page=6&page=' + pageNumber,
                     function (data) {
 
-                        toggleNext(Object.keys(data).length, pageNumber)
 
+                        toggleNext(Object.keys(data).length, pageNumber)
+                        
 
                         data.forEach(e => {
+                            // console.log(e)
+
+                            
+
+
+                            const yellowBox = `<div class="card-date">${e.date.slice(8,10)}<hr><div><span>${convertToMonth(e.date.slice(5,7))}</span><span>${e.date.slice(0,4)}</span></div>`
+
                             if (e.featured_media_src_url) {
                                 $('#post_container').append(
-                                    `<div data-aos="fade-up" data-aos-duration="1500" class="col-md-4 col-sm-12"> <div class="readmore"><div class="readmore-cap"><img src="${e.featured_media_src_url}" alt=""></div><div class="readmore-footer bg-dark text-light p-3"><h5 data-aos="fade-in" class="slider-caption-class" data-aos-duration="500">${e.title.rendered}</h5><div data-aos="fade-in" data-aos-duration="500" class="card-excerpt">${e.excerpt.rendered}</div><a data-aos="fade-in" data-aos-duration="500" class="btn btn-success" href="${e.link}">Read More</a></div></div></div>`
+                                    `<div data-aos="fade-up" data-aos-duration="1500" class="col-md-4 col-sm-12"> <div class="readmore"><div class="readmore-cap">${yellowBox}</div><img src="${e.featured_media_src_url}" alt=""></div><div class="readmore-footer bg-dark text-light p-3"><h5 data-aos="fade-in" class="slider-caption-class" data-aos-duration="500">${e.title.rendered}</h5><div data-aos="fade-in" data-aos-duration="500" class="card-excerpt">${e.excerpt.rendered}</div><a data-aos="fade-in" data-aos-duration="500" class="btn btn-success" href="${e.link}">Read More</a></div></div></div>`
                                 )
                             } else {
                                 $('#post_container').append(
-                                    `<div data-aos="fade-up" data-aos-duration="1500"  class="col-md-4 col-sm-12"> <div class="readmore"><div class="readmore-cap"><img src="<?php echo get_template_directory_uri() . "/images/unavailable-image.jpeg" ;?>"
+                                    `<div data-aos="fade-up" data-aos-duration="1500"  class="col-md-4 col-sm-12"> <div class="readmore"><div class="readmore-cap"><div class="card-date">12</div><img src="<?php echo get_template_directory_uri() . "/images/unavailable-image.jpeg" ;?>"
  alt=""></div><div class="readmore-footer bg-dark text-light p-3"><h5 data-aos="fade-in" data-aos-duration="500" class="slider-caption-class">${e.title.rendered}</h5><div class="card-excerpt" data-aos="fade-in" data-aos-duration="500">${e.excerpt.rendered}</div><a data-aos="fade-in" data-aos-duration="500" class="btn btn-success" href="${e.link}">Read More</a></div></div></div>`
                                 )
                             }

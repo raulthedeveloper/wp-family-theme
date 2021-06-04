@@ -8,7 +8,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-3 col-sm-12">
+            <div class="col-md-3 col-sm-6">
                 <h4 class="text-light">SITE MAP</h4>
 
                 <?php 
@@ -22,7 +22,7 @@
         ?>
             </div>
 
-            <div class="col-md-3 col-sm-12">
+            <div class="col-md-3 col-sm-6">
                 <h4 class="text-light">OTHER SITES</h4>
 
                 <?php 
@@ -36,7 +36,7 @@
         ?>
             </div>
 
-            <div class="col-md-3 col-sm-12">
+            <div class="col-md-3 col-sm-6">
                 <h4 class="text-light">CONTACT US</h4>
 
                 <?php 
@@ -50,7 +50,7 @@
         ?>
             </div>
 
-            <div class="col-md-3 col-sm-12 ">
+            <div class="col-md-3 col-sm-6 ">
                 <h4 class="text-light">FOLLOW US</h4>
                 <div class="d-flex justify-content-around">
 
