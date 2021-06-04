@@ -10,7 +10,7 @@
 
 .secondary-header {
   background-color: black;
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
   padding-bottom: 0;
   padding: 2rem;
 }
@@ -384,6 +384,7 @@ svg {
 
 .carousel-item img {
   height: 550px;
+  filter: brightness(0.7);
 }
 
 .light-grey-section {

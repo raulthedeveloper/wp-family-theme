@@ -27,7 +27,7 @@
 
         <div class="col-md-9 col-sm-12">
        
-        <img class="img-fluid"  src="<?php the_post_thumbnail_url(); ?>" alt="">
+        <img class="img-fluid w-100"  src="<?php the_post_thumbnail_url(); ?>" alt="">
         <?php get_template_part('includes/section','blogcontent' ); ?>
         </div>
 
