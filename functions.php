@@ -47,6 +47,9 @@ function load_js()
 
     wp_register_script( 'bootstrap', get_template_directory_uri(  ) . '/js/bootstrap.min.js', 'jquery', false, true );
     wp_enqueue_script( 'bootstrap' );
+
+    wp_register_script('my-scripts', get_template_directory_uri() . '/js/my_scripts.js', 'jquery', false,true);
+    wp_enqueue_script('my-scripts');
 }
 
 // Load Hooks
@@ -130,40 +133,40 @@ add_action( 'widgets_init', 'my_sidebars');
 
 ///////// Custom Posts
 
-// function event_post_type(){
+function team_post_type(){
 
-//     $args = array(
-//         'labels' => array(
-//             'name' => 'Events',
-//             'singular_name' => 'Event',
-//         ),
-//         'hierarchical' => true,
-//         'public' => true,
-//         'has_archive' => true,
-//         'supports' => array('title','editor','thumbnail'),
-//         'menu_icon' => 'dashicons-calendar-alt'
-//     );
+    $args = array(
+        'labels' => array(
+            'name' => 'Team',
+            'singular_name' => 'Member',
+        ),
+        'hierarchical' => true,
+        'public' => true,
+        'has_archive' => true,
+        'supports' => array('title','editor','thumbnail'),
+        'menu_icon' => 'dashicons-businessperson'
+    );
 
-//     register_post_type('events', $args);
-// }
+    register_post_type('team', $args);
+}
 
-// add_action('init','event_post_type' );
+add_action('init','Team_post_type' );
 
 
 /////////// Taxonomies ///////////
 
-// function my_taxonomy(){
+function my_taxonomy(){
 
-//     $arg = array(
+    $arg = array(
 
-//         'public' => true,
-//         'hierarchical' => false,
-//     );
+        'public' => true,
+        'hierarchical' => false,
+    );
 
-//     register_taxonomy( 'family-events', array('events'),$args);
-// }
+    register_taxonomy( 'team-members', array('team'),$args);
+}
 
-// add_action( 'init', 'my_taxonomy' );
+add_action( 'init', 'my_taxonomy' );
 
 
 /////// Contact Form ////////////

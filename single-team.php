@@ -1,26 +1,34 @@
-<?php
-/*
-Template Name: About Us
-*/
-?>
 <?php get_header(); ?>
-
-
-
-<div class="container p-3 mt-3 mb-3">
+<div class="container">
     <div class="row">
-        <h1 class="text-center"><?php the_title(); ?></h1>
+
+    <div class="row">
 
 
         <div class="col-md-7 col-sm-12">
+        <h2><?php echo get_field('first_name') , " " . get_field('last_name'); ?></h2>
 
-            <?php the_content() ?>
+            <p><?php echo get_the_content() ? the_content() : 'Please insert Bio for Team Member';?></p>
+
+            
+
+
+            
+
         </div>
 
         <div class="col-md-5 col-sm-12">
-            <?php if(has_post_thumbnail()): ?>
+            <?php 
+                 $args = array(
+                    'post_type' => 'Team',
+                    'posts_per_page' => -1
+                );
+            
+                $the_query = new WP_Query( $args );
+            
+            if(($the_query)): ?>
 
-            <img class="img-fluid w-100" src="<?php the_post_thumbnail_url(); ?>" alt="">
+            <img class="img-fluid w-100" src="<?php echo get_field('image') ? get_field('image')['sizes']['large'] : get_template_directory_uri(  ) . "/images/unavailable-image.jpeg" ?>" alt="<?php echo get_field('image')['alt'] ?>">
 
             <div class="social-media-container">
                 <a target="_blank" href="https://www.facebook.com/">
@@ -49,67 +57,31 @@ Template Name: About Us
             <?php endif?>
         </div>
     </div>
-    <hr>
-
-    
-
-    <div class="row">
-                <h2 class="text-center mb-5">The Team</h2>
 
 
+        <?php if(has_post_thumbnail()): ?>
+
+        <img class="img-fluid" width="80" src="<?php the_post_thumbnail_url(); ?>" alt="">
+
+        <?php endif?>
 
 
-<?php 
 
-    $args = array(
-        'post_type' => 'Team',
-        'posts_per_page' => -1
-    );
-
-    $the_query = new WP_Query( $args );
- 
-        // The Loop
-        if ( $the_query->have_posts() ) {
-           
-            while ( $the_query->have_posts() ) {
-                 $the_query->the_post(); ?>
+        
 
 
-<div class="col-md-3 employee-image mb-3">
-            <a href="<?php echo get_the_permalink() ?>">
-                <div class="card bg-dark text-white ">
-                    <img style="filter:none"
-                        src="<?php echo get_field('image') ? get_field('image')['sizes']['blog-small'] : get_template_directory_uri(  ) . '/images/unavailable-image.jpeg' ?>"
-                        class="card-img img-fluid" alt="<?php echo get_field('image')['alt'] ?>">
 
-                    <div class="card-footer">
-                        <h3 class="card-title h-10 m-auto text-center"><?php echo get_field('title') ? get_field('title') : 'Title' ?></h3>
-                        <h5 class="card-title  h-10 m-auto text-center font-weight-light"><?php echo get_field('first_name') && get_field('last_name') ? get_field('first_name') . " " . get_field('last_name') : "name" ?></h5>
+        
 
-                    </div>
-            </a>
-        </div>
     </div>
 
-                
-           <?php }
-        } else {
-            echo 'no post where found';
-            // no posts found
-}
-        /* Restore original Post Data */
-            wp_reset_postdata();
+
     
-    ?>
 
-
-</div>
-
+    
 
 </div>
 
-
-
-
+<?php wp_link_pages( ) ?>
 
 <?php get_footer(); ?>

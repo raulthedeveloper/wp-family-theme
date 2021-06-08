@@ -149,6 +149,34 @@ footer a {
   height: 3px;
 }
 
+.employee-image a {
+  text-decoration: none;
+}
+.employee-image:hover {
+  filter: brightness(0.7);
+}
+.employee-image h3 {
+  color: rgba(240, 240, 240, 0.562);
+  font-size: 1rem;
+}
+.employee-image h5 {
+  text-decoration: none;
+  color: white;
+}
+
+@media only screen and (max-width: 575px) {
+  .employee-image {
+    border: none;
+  }
+  .employee-image h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  .employee-image h5 {
+    font-size: 1.7rem;
+    font-weight: 300;
+  }
+}
 .contact-form {
   background-color: #ececec;
   padding: 2.5rem;
