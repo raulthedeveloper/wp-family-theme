@@ -144,7 +144,7 @@ function team_post_type(){
         'public' => true,
         'has_archive' => true,
         'supports' => array('title','editor','thumbnail'),
-        'menu_icon' => 'dashicons-businessperson'
+        'menu_icon' => 'dashicons-businessman'
     );
 
     register_post_type('team', $args);

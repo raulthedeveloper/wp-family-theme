@@ -51,6 +51,10 @@
 }
 
 
+.social-media-icons:hover {
+    fill: #bd8c18;
+  }
+
 .employee-image{
     a{
         text-decoration: none;
@@ -69,6 +73,24 @@
     h5{
         text-decoration: none;
         color: white;
+    }
+}
+
+.about-card-title{
+    text-align: center;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    letter-spacing: 5px;
+
+    span:first-of-type{
+        color: rgba(255, 255, 255, 0.562);
+    font-size: 1.4rem;
+    }
+    span:last-of-type{
+        color: white;
+    font-size: 1.7rem;
     }
 }
 

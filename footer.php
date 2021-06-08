@@ -58,7 +58,7 @@
                 $iconsize = "50";
                 ?>
                     <a target="_blank" href="https://www.facebook.com/">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="<?php echo $iconsize?>"
+                        <svg class="social-media-icons" xmlns="http://www.w3.org/2000/svg" width="<?php echo $iconsize?>"
                             height="<?php echo $iconsize?>" fill="currentColor" class="bi bi-facebook"
                             viewBox="0 0 16 16">
                             <path
@@ -68,7 +68,7 @@
 
                     <a target="_blank" href="https://www.instagram.com/">
 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="<?php echo $iconsize?>"
+                        <svg class="social-media-icons" xmlns="http://www.w3.org/2000/svg" width="<?php echo $iconsize?>"
                             height="<?php echo $iconsize?>" fill="currentColor" class="bi bi-instagram"
                             viewBox="0 0 16 16">
                             <path
@@ -78,7 +78,7 @@
 
                     <a target="_blank" href="https://www.linkedin.com/">
 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="<?php echo $iconsize?>"
+                        <svg class="social-media-icons" xmlns="http://www.w3.org/2000/svg" width="<?php echo $iconsize?>"
                             height="<?php echo $iconsize?>" fill="currentColor" class="bi bi-linkedin"
                             viewBox="0 0 16 16">
                             <path

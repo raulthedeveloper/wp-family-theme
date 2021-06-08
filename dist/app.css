@@ -149,6 +149,10 @@ footer a {
   height: 3px;
 }
 
+.social-media-icons:hover {
+  fill: #bd8c18;
+}
+
 .employee-image a {
   text-decoration: none;
 }
@@ -162,6 +166,23 @@ footer a {
 .employee-image h5 {
   text-decoration: none;
   color: white;
+}
+
+.about-card-title {
+  text-align: center;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  letter-spacing: 5px;
+}
+.about-card-title span:first-of-type {
+  color: rgba(255, 255, 255, 0.562);
+  font-size: 1.4rem;
+}
+.about-card-title span:last-of-type {
+  color: white;
+  font-size: 1.7rem;
 }
 
 @media only screen and (max-width: 575px) {
@@ -417,4 +438,12 @@ svg {
 
 .light-grey-section {
   background: #dcdcdc52;
+}
+
+.contact-box ul {
+  list-style: none;
+  padding-left: none;
+}
+.contact-box span {
+  font-weight: bold;
 }
