@@ -78,16 +78,16 @@ Template Name:Blog Page
 
     </div>
 
-    <hr>
+    <hr id="card-line">
 
     <div class="row mt-5">
         <h2 class="text-center">Most Recent Posts</h2>
 
         <div class="post-btn-container">
-            <button type="button" class="btn btn-warning previous-button"><i
-                    class="fa fa-arrow-circle-left"></i>Previous</button>
-            <button type="button" class="btn btn-warning next-button">Next <i
-                    class="fa fa-arrow-circle-right"></i></button>
+            <a href="#card-line" type="button" class="btn btn-warning previous-button"><i
+                    class="fa fa-arrow-circle-left"></i>Previous</a>
+            <a href="#card-line" type="button" class="btn btn-warning next-button">Next <i
+                    class="fa fa-arrow-circle-right"></i></a>
         </div>
 
 
@@ -100,10 +100,10 @@ Template Name:Blog Page
 
         </div>
         <div class="post-btn-container">
-            <button type="button" class="btn btn-warning previous-button"><i
-                    class="fa fa-arrow-circle-left"></i>Previous</button>
-            <button type="button" class="btn btn-warning next-button">Next <i
-                    class="fa fa-arrow-circle-right"></i></button>
+            <a  href="#card-line" type="button" class="btn btn-warning previous-button"><i
+                    class="fa fa-arrow-circle-left"></i>Previous</a>
+            <a href="#card-line" type="button" class="btn btn-warning next-button">Next <i
+                    class="fa fa-arrow-circle-right"></i></a>
         </div>
 
 
@@ -146,15 +146,16 @@ Template Name:Blog Page
 
 
         function togglePrevious(page) {
-            $('.next-button').attr("disabled", false)
+            $('.next-button').css({'pointer-events':'initial','background-color':'#ffc107'})
 
             if(clicks == 0){
-                $('.previous-button').attr("disabled", true)
+                $('.previous-button').css({'pointer-events':'none','background-color':'#ffeaab'})
 
             }
 
             if(clicks > 0){
-                $('.previous-button').attr("disabled", false)
+                // $('.previous-button').attr("disabled", false)
+                $('.previous-button').css({'pointer-events':'initial','background-color': '#ffc107'})
             }
 
 
@@ -164,7 +165,7 @@ Template Name:Blog Page
         function toggleNext(elements, page) {
 
             if(clicks == 2){
-                $('.next-button').attr("disabled", true)
+                $('.next-button').css({'pointer-events':'none','background-color':'#ffeaab'})
                 
             }
 

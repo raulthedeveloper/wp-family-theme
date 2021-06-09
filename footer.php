@@ -23,7 +23,7 @@
             </div>
 
             <div class="col-md-3 col-sm-6">
-                <h4 class="text-light">OTHER SITES</h4>
+                <h4 class="text-light">Team</h4>
 
                 <?php 
             wp_nav_menu( 
@@ -101,6 +101,8 @@
 <?php wp_footer(  )?>
 
 <script>
+
+
     AOS.init({
         once: true
     })

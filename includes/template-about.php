@@ -17,7 +17,7 @@ Template Name: About Us
             <?php the_content() ? the_content() : "<h3>Please add Content</h3>"?>
         </div>
 
-        <div class="col-md-5 col-sm-12">
+        <div class="col-md-5 col-sm-12 order-first order-md-last mb-4">
             <?php if(has_post_thumbnail()): ?>
                 
             <img class="img-fluid w-100" src="<?php the_post_thumbnail_url(); ?>" alt="">
@@ -82,7 +82,7 @@ Template Name: About Us
             <a href="<?php echo get_the_permalink() ?>">
                 <div class="card bg-dark text-white ">
                     <img style="filter:none"
-                        src="<?php echo get_field('image') ? get_field('image')['sizes']['blog-small'] : get_template_directory_uri(  ) . '/images/unavailable-image.jpeg' ?>"
+                        src="<?php echo get_field('image') ? get_field('image')['sizes']['medium'] : get_template_directory_uri(  ) . '/images/unavailable-image.jpeg' ?>"
                         class="card-img img-fluid" alt="<?php echo get_field('image')['alt'] ?>">
 
                     <div class="card-footer">

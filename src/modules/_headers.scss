@@ -19,7 +19,7 @@
     color: white;
     position: relative;
     top: 4rem;
-    width: 70%;
+    width: 87%;
     margin: auto;
 
 }
@@ -39,4 +39,31 @@
 
 .not-found-page .display-1{
     font-size: 10rem;
+}
+
+.mobile-nav{
+    display: none;
+}
+
+@media only screen and (max-width:767px){
+    .secondary-header{
+        margin-bottom: 4rem;
+    }
+
+
+    .mobile-nav{
+        display: initial;
+    }
+
+    .secondary-nav{
+        display: none;
+        width: 100%;
+        position: initial;
+    }
+}
+
+@media only screen and (max-width: $small){
+    
+    
+
 }
