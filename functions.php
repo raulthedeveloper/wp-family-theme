@@ -229,3 +229,22 @@ function contact_form(){
 
 add_action( 'wp_ajax_contact','contact_form');
 add_action( 'wp_ajax_nopriv_contact','contact_form');
+
+
+// Add image url to template if a field is created, if not a default image url is added
+function templateImage($image, $alt=false){
+    if($alt){
+        echo get_field($image)['alt'];
+      }
+      elseif(get_field($image)){
+        echo get_field($image)['sizes']['blog-large'];
+      }
+      else{
+        echo get_template_directory_uri() . "/images/unavailable-image.jpeg" ;
+      }
+}
+
+function tempateFeaturedImage(){
+    // Create a function that replaces non existent images with template default
+}
+

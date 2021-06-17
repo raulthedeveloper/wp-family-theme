@@ -9,14 +9,9 @@ Template Name:Blog Page
 
 <?php get_header() ?>
 
-<div class="container">
-
-    <div>
-
-
-
-        <div class="row mb-5" data-aos="fade-in">
-            <div class="col-md-8 col-sm-12 latest-post" style="max-height:536px">
+<div class="container mb-5">
+<div class="row" data-aos="fade-in">
+            <div class="col-md-8 col-sm-12 latest-post">
                 <?php
         $recent_posts = wp_get_recent_posts(array(
             'numberposts' => 1, // Number of recent posts thumbnails to display
@@ -76,7 +71,17 @@ Template Name:Blog Page
 
         </div>
 
-    </div>
+    
+
+</div>
+
+<div class="container">
+
+   
+
+
+
+       
 
     <hr id="card-line">
 

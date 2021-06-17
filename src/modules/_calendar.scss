@@ -1,8 +1,12 @@
 #calendar-2{
     font-size: 1.3rem;
-    background: gainsboro;
     padding: 10px;
     text-align: center;
+    
+
+   
+    @include widget-header($calendar:true);
+    
 
     caption{
         text-align: center;

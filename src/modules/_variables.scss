@@ -1,3 +1,37 @@
 $small: 575px;
 
 $accent-color:#ffbd21;
+$widget-color:#212529;
+$widget-text:#ffff;
+
+@mixin widget-header ($select:false,$calendar:false) {
+    background: $widget-color;
+    color: $widget-text;
+    h4{
+        border-bottom: solid 1px;
+        padding-bottom: .5rem;
+    }
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 6px;
+    @if $select{
+        label{
+            display: none;
+        }
+        select{
+            background-color: #198753;
+            color: #ffff;
+            padding: 7px;
+            border-radius: 5px;
+            width: 100%;
+        }
+    }
+
+    @if $calendar{
+        td{
+            font-weight: 200;
+        }
+    }
+   
+}

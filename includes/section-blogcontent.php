@@ -1,10 +1,6 @@
 <?php if( have_posts() ): while( have_posts() ): the_post();?>
-<h1 class="text-center"><?php echo single_cat_title(); ?></h1>
 
-<!-- section-blogcontent -->
-
-
-<br>
+<!-- section- -->
 
 
 
@@ -30,7 +26,7 @@ if($tags):?>
    foreach($categories as $cat):
 ?>
 
-<a href="<?php echo get_category_link($cat->term_id ) ?>"><?php echo $cat->name; ?></a>
+<a class="btn btn-dark" href="<?php echo get_category_link($cat->term_id ) ?>"><?php echo $cat->name; ?></a>
 <?php endforeach ?>
 
 <hr>

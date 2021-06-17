@@ -34,41 +34,41 @@ $section6 = get_field('section_6');
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-    <img src="<?php echo get_field('slide_1'); ?>" class="d-block w-100" alt="...">
+    <img src="<?php templateImage('slide_1') ?>" class="d-block w-100" alt="<?php templateImage('slide_1',true) ?>">
       <div class="carousel-caption d-none d-md-block">
       <?php echo get_field('slide_1_excerpt'); ?>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="<?php echo get_field('slide_2'); ?>" class="d-block w-100" alt="...">
+    <img src="<?php templateImage('slide_2'); ?>" class="d-block w-100" alt="<?php templateImage('slide_2',true) ?>">
 
       <div class="carousel-caption d-none d-md-block">
       <?php echo get_field('slide_2_excerpt'); ?>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="<?php echo get_field('slide_3'); ?>" class="d-block w-100" alt="...">
+    <img src="<?php templateImage('slide_3'); ?>" class="d-block w-100" alt="<?php templateImage('slide_3',true) ?>">
 
       <div class="carousel-caption d-none d-md-block">
       <?php echo get_field('slide_3_excerpt'); ?>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="<?php echo get_field('slide_4'); ?>" class="d-block w-100" alt="...">
+    <img src="<?php templateImage('slide_4'); ?>" class="d-block w-100" alt="<?php templateImage('slide_4',true) ?>">
 
       <div class="carousel-caption d-none d-md-block">
       <?php echo get_field('slide_4_excerpt'); ?>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="<?php echo get_field('slide_5'); ?>" class="d-block w-100" alt="...">
+    <img src="<?php templateImage('slide_5'); ?>" class="d-block w-100" alt="<?php templateImage('slide_5',true) ?>">
 
       <div class="carousel-caption d-none d-md-block">
       <?php echo get_field('slide_5_excerpt'); ?>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="<?php echo get_field('slide_6'); ?>" class="d-block w-100" alt="...">
+    <img src="<?php templateImage('slide_6'); ?>" class="d-block w-100" alt="<?php templateImage('slide_6',true) ?>">
 
       <div class="carousel-caption d-none d-md-block">
       <?php echo get_field('slide_6_excerpt'); ?>
@@ -88,11 +88,13 @@ $section6 = get_field('section_6');
 </div>
 </div>
 
+
+
 <section class="light-grey-section">
 <div class="container">
 <div class="row" data-aos="fade-up">
     <div class="col-md-6 col-sm-12">
-        <img class="img-fluid" src="<?php echo get_field('section_1_image') ?>" alt="">
+        <img class="img-fluid" src="<?php templateImage('section_1_image') ?>" alt="<?php templateImage('section_1_image',true) ?>">
     </div>
 
     <div class="col-md-6 col-sm-12">
@@ -114,7 +116,7 @@ $section6 = get_field('section_6');
 
 
     <div class="col-md-6 col-sm-12">
-    <img class="img-fluid" src="<?php echo get_field('section_2_image') ?>" alt="">
+    <img class="img-fluid" src="<?php templateImage('section_2_image') ?>" alt="<?php templateImage('section_2_image',true) ?>">
 
     </div>
 </div>
@@ -125,7 +127,7 @@ $section6 = get_field('section_6');
 <div class="container">
 <div class="row" data-aos="fade-up">
     <div class="col-md-6 col-sm-12">
-        <img class="img-fluid" src="<?php echo get_field('section_3_image') ?>" alt="">
+        <img class="img-fluid" src="<?php templateImage('section_3_image') ?>" alt="<?php templateImage('section_3_image',true) ?>">
     </div>
 
     <div class="col-md-6 col-sm-12">
@@ -148,7 +150,7 @@ $section6 = get_field('section_6');
 
 
     <div class="col-md-6 col-sm-12">
-    <img class="img-fluid" src="<?php echo get_field('section_4_image') ?>" alt="">
+    <img class="img-fluid" src="<?php templateImage('section_4_image') ?>" alt="<?php templateImage('section_4_image',true) ?>">
 
     </div>
 </div>
@@ -159,7 +161,7 @@ $section6 = get_field('section_6');
 <div class="container">
 <div class="row" data-aos="fade-up">
     <div class="col-md-6 col-sm-12">
-        <img class="img-fluid" src="<?php echo get_field('section_5_image') ?>" alt="">
+        <img class="img-fluid" src="<?php templateImage('section_5_image') ?>" alt="<?php templateImage('section_5_image',true) ?>">
     </div>
 
     <div class="col-md-6 col-sm-12">
@@ -182,7 +184,7 @@ $section6 = get_field('section_6');
 
 
     <div class="col-md-6 col-sm-12">
-    <img class="img-fluid" src="<?php echo get_field('section_6_image') ?>" alt="">
+    <img class="img-fluid" src="<?php templateImage('section_6_image') ?>" alt="<?php templateImage('section_6_image',true) ?>">
 
     </div>
 </div>

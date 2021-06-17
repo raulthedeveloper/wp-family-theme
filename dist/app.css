@@ -1,8 +1,19 @@
 #calendar-2 {
   font-size: 1.3rem;
-  background: gainsboro;
   padding: 10px;
   text-align: center;
+  background: #212529;
+  color: #ffff;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 6px;
+}
+#calendar-2 h4 {
+  border-bottom: solid 1px;
+  padding-bottom: 0.5rem;
+}
+#calendar-2 td {
+  font-weight: 200;
 }
 #calendar-2 caption {
   text-align: center;
@@ -126,6 +137,9 @@ footer a {
   box-shadow: 0px 1px 15px 0px;
   max-height: 450px;
 }
+.readmore-footer {
+  padding-bottom: 1rem;
+}
 .readmore-footer h5 {
   font-weight: bold;
   letter-spacing: 3px;
@@ -133,6 +147,13 @@ footer a {
 .readmore-footer p {
   font-weight: 300;
   color: #ffffffa6;
+}
+.readmore-footer button {
+  margin-bottom: 0.3rem;
+}
+
+.card-excerpt {
+  height: 208px;
 }
 
 .readmore:hover {
@@ -272,10 +293,28 @@ svg {
 
 .widget_archive {
   list-style: none;
-  background: gainsboro;
   text-align: center;
   padding: 1rem;
   margin-bottom: 1rem;
+  background: #212529;
+  color: #ffff;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 6px;
+}
+.widget_archive h4 {
+  border-bottom: solid 1px;
+  padding-bottom: 0.5rem;
+}
+.widget_archive label {
+  display: none;
+}
+.widget_archive select {
+  background-color: #198753;
+  color: #ffff;
+  padding: 7px;
+  border-radius: 5px;
+  width: 100%;
 }
 
 /* .single-side-bar{
@@ -287,12 +326,37 @@ svg {
         border-left: initial;
     }
 } */
+.blog-header {
+  background: #dcdcdc78;
+  margin-bottom: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 .widget_categories {
   list-style: none;
-  background: gainsboro;
   text-align: center;
   padding: 1rem;
   margin-bottom: 1rem;
+  background: #212529;
+  color: #ffff;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 6px;
+}
+.widget_categories h4 {
+  border-bottom: solid 1px;
+  padding-bottom: 0.5rem;
+}
+.widget_categories label {
+  display: none;
+}
+.widget_categories select {
+  background-color: #198753;
+  color: #ffff;
+  padding: 7px;
+  border-radius: 5px;
+  width: 100%;
 }
 
 .latest-post img {
@@ -476,4 +540,12 @@ svg {
 }
 .contact-box span {
   font-weight: bold;
+}
+
+.display-4 {
+  font-size: calc(2rem + 2.7vw);
+}
+
+.blog-jumbotron h1 {
+  border-bottom: solid 1px;
 }

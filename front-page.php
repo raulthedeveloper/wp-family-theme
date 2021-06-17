@@ -10,6 +10,7 @@ $section3_content = nl2br(get_field('our_vision'));
 
         
     </div>
+    <?php var_dump(get_field('image_1')) ?>
 
     <section class="two-col" data-aos="fade-up">
         <div class="container">
@@ -17,11 +18,15 @@ $section3_content = nl2br(get_field('our_vision'));
                 <div class="col-md-6" data-aos="fade-in" data-aos-duration="2000">
                     
                 <?php echo $section1_content?>
+
+               
                     
                 </div>
                 <div class="col-md-6 d-flex justify-content-center" data-aos="fade-in" data-aos-duration="2000">
-                <img src="https://images.indianexpress.com/2018/10/parents-fights.jpg" alt="">
+                <img class="img-fluid" src="<?php echo templateImage('image_1') ?>" alt="<?php echo templateImage('image_1') ?>">
+                
 
+                
                 </div>
             </div>
         </div>
@@ -47,7 +52,6 @@ $section3_content = nl2br(get_field('our_vision'));
    
     <!-- Gets call to action section -->
     <?php  
-    
     get_template_part('includes/section','call2action' ) 
     
     ?> 
@@ -58,7 +62,12 @@ $section3_content = nl2br(get_field('our_vision'));
         <div class="container">
             <div class="row">
                 <div class="col-md-6 d-flex justify-content-center" data-aos="fade-in" data-aos-duration="2000">
-                    <img src="https://images.pexels.com/photos/2086748/pexels-photo-2086748.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                <img class="img-fluid" src="<?php echo templateImage('image_2') ?>" alt="<?php echo templateImage('image_2') ?>">
+
+
+                <?php if(!get_field('image_2')): ?>
+                    <img class="img-fluid" src="<?php echo get_template_directory_uri() . '/images/unavailable-image.jpeg' ;?>" />
+                <?php endif ?>
                 </div>
                 <div class="col-md-6" data-aos="fade-in" data-aos-duration="2000">
                     <?php echo $section3_content ?>
