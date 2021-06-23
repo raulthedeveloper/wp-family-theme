@@ -11,6 +11,7 @@
 #calendar-2 h4 {
   border-bottom: solid 1px;
   padding-bottom: 0.5rem;
+  font-size: 30px;
 }
 #calendar-2 td {
   font-weight: 200;
@@ -305,6 +306,7 @@ svg {
 .widget_archive h4 {
   border-bottom: solid 1px;
   padding-bottom: 0.5rem;
+  font-size: 30px;
 }
 .widget_archive label {
   display: none;
@@ -317,15 +319,6 @@ svg {
   width: 100%;
 }
 
-/* .single-side-bar{
-    border-left: solid 1px #bfbcbc;
-}
-
-@media only screen and (max-width:600px) {
-    .single-side-bar{
-        border-left: initial;
-    }
-} */
 .blog-header {
   background: #dcdcdc78;
   margin-bottom: 3rem;
@@ -347,6 +340,7 @@ svg {
 .widget_categories h4 {
   border-bottom: solid 1px;
   padding-bottom: 0.5rem;
+  font-size: 30px;
 }
 .widget_categories label {
   display: none;
@@ -510,6 +504,12 @@ svg {
 #calendar-2 {
   list-style: none;
 }
+#calendar-2 h4 {
+  font-size: 30px;
+}
+#calendar-2 td {
+  font-size: 31px;
+}
 
 #wp-calendar {
   width: 100%;
@@ -548,4 +548,15 @@ svg {
 
 .blog-jumbotron h1 {
   border-bottom: solid 1px;
+}
+
+.readmore-link {
+  text-align: center;
+  background: #fec002;
+  color: black;
+  padding: 3rem;
+  font-size: 2rem;
+}
+.readmore-link:hover {
+  background-color: #ce9c04;
 }

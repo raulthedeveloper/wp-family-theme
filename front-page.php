@@ -7,11 +7,8 @@ $section1_content = nl2br(get_field('what_is_the_first_bond'));
 $section2_content = nl2br(get_field('our_mission'));
 $section3_content = nl2br(get_field('our_vision'));
 ?>
-
-        
+ 
     </div>
-    <?php var_dump(get_field('image_1')) ?>
-
     <section class="two-col" data-aos="fade-up">
         <div class="container">
             <div class="row">

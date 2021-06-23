@@ -55,3 +55,30 @@ Loading Div
 
 
             <?php endforeach; ?>
+
+
+
+
+
+
+
+
+
+
+             <?php if(!has_post_thumbnail()): 
+                ?>
+
+                <?php echo get_the_post_thumbnail($post_item['ID'],'blog-large') ?>
+
+                <?php endif?>
+
+
+
+                    <!-- Doesnt have thumbnail -->
+                <?php if(has_post_thumbnail()): 
+                ?>
+
+                <img class="img-fluid" src="<?php echo get_template_directory_uri() . "/images/unavailable-image.jpeg" ;?>
+" alt="unavailable image">
+
+                <?php endif?>

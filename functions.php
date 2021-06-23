@@ -244,7 +244,16 @@ function templateImage($image, $alt=false){
       }
 }
 
-function tempateFeaturedImage(){
-    // Create a function that replaces non existent images with template default
+
+
+function templateFeaturedImage($image){
+    $unavailableImage = get_template_directory_uri() . "/images/unavailable-image.jpeg";
+
+    if($image){
+        echo $image;
+    }else{
+        echo"<img class=\"img-fluid\" src=\"{$unavailableImage}
+        \" alt=\"unavailable image\">" ;
+    }
 }
 
