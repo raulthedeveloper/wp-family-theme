@@ -4,9 +4,24 @@ $accent-color:#ffbd21;
 $widget-color:#212529;
 $widget-text:#ffff;
 
+@mixin header-icon($header:false,$footer:false){
+    @if $header {
+        color: black;
+
+        &:hover{
+            color: #404040;
+        }
+        @if $footer {
+            color: $accent-color;
+        }
+    }
+    
+}
+
 @mixin widget-header ($select:false,$calendar:false) {
     background: $widget-color;
     color: $widget-text;
+    letter-spacing: 4px;
     h4{
         border-bottom: solid 1px;
         padding-bottom: .5rem;

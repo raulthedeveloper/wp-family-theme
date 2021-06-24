@@ -1,7 +1,6 @@
 .contact-form{
     background-color: #ececec;
     padding: 2.5rem;
-    margin-top: 3rem;
 }
 
 .contact-squares textarea{
@@ -23,4 +22,56 @@
 
 #submit:hover{
     background-color: #ffb300;
+}
+
+.contact-squares{
+    background-color: #d3d3d370;
+    padding: 1.4rem;
+    height: 100%;
+}
+
+
+.contact-squares ul{
+    list-style: none;
+}
+
+.contact-container{
+    ul{
+        padding-left: 0 !important;
+    }
+}
+
+
+
+.contact-box{
+    background-color: #ffc006;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    text-align: center;
+    list-style: none;
+
+
+    
+
+    li{
+        font-weight: 300;
+        letter-spacing: 3px;
+        border-bottom: 1px solid;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        
+    }
+    li:last-of-type{
+        border-bottom: initial;
+    }
+
+    span{
+        font-weight: bold;
+    }
+}
+
+@media only screen and (max-width: 767px){
+	.contact-box{
+        margin-bottom: 1rem;
+    }
 }

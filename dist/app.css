@@ -2,11 +2,19 @@
   font-size: 1.3rem;
   padding: 10px;
   text-align: center;
+  list-style: none;
   background: #212529;
   color: #ffff;
+  letter-spacing: 4px;
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-radius: 6px;
+}
+#calendar-2 h4 {
+  font-size: 30px;
+}
+#calendar-2 td {
+  font-size: initial;
 }
 #calendar-2 h4 {
   border-bottom: solid 1px;
@@ -60,6 +68,10 @@
   display: none;
 }
 
+#top-contact {
+  padding: 0.2rem;
+}
+
 @media only screen and (max-width: 767px) {
   .secondary-header {
     margin-bottom: 4rem;
@@ -73,6 +85,11 @@
     display: none;
     width: 100%;
     position: initial;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #top-contact {
+    display: none;
   }
 }
 footer {
@@ -250,7 +267,6 @@ footer a {
 .contact-form {
   background-color: #ececec;
   padding: 2.5rem;
-  margin-top: 3rem;
 }
 
 .contact-squares textarea {
@@ -274,13 +290,53 @@ footer a {
   background-color: #ffb300;
 }
 
+.contact-squares {
+  background-color: #d3d3d370;
+  padding: 1.4rem;
+  height: 100%;
+}
+
+.contact-squares ul {
+  list-style: none;
+}
+
+.contact-container ul {
+  padding-left: 0 !important;
+}
+
+.contact-box {
+  background-color: #ffc006;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  text-align: center;
+  list-style: none;
+}
+.contact-box li {
+  font-weight: 300;
+  letter-spacing: 3px;
+  border-bottom: 1px solid;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+.contact-box li:last-of-type {
+  border-bottom: initial;
+}
+.contact-box span {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 767px) {
+  .contact-box {
+    margin-bottom: 1rem;
+  }
+}
 * {
   margin: 0;
   padding: 0;
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 section {
@@ -288,8 +344,24 @@ section {
   padding-bottom: 6rem;
 }
 
-svg {
-  color: #ffbd21;
+.svg-header {
+  color: black;
+  margin-right: 0.2rem;
+}
+.svg-header:hover {
+  color: #404040;
+}
+
+.icon-box span {
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.header-contact {
+  margin-right: 1rem;
+}
+.header-contact span {
+  font-weight: bold;
 }
 
 .widget_archive {
@@ -299,6 +371,7 @@ svg {
   margin-bottom: 1rem;
   background: #212529;
   color: #ffff;
+  letter-spacing: 4px;
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-radius: 6px;
@@ -333,6 +406,7 @@ svg {
   margin-bottom: 1rem;
   background: #212529;
   color: #ffff;
+  letter-spacing: 4px;
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-radius: 6px;
@@ -456,16 +530,6 @@ svg {
   width: 100%;
 }
 
-.contact-squares {
-  background-color: #d3d3d370;
-  padding: 1.4rem;
-  height: 100%;
-}
-
-.contact-squares ul {
-  list-style: none;
-}
-
 .social-media-container {
   display: flex;
   justify-content: space-evenly;
@@ -476,6 +540,7 @@ svg {
 
 .card-img {
   filter: brightness(0.5);
+  height: 200px;
 }
 
 .previous-button {
@@ -501,16 +566,6 @@ svg {
   padding-bottom: 60px;
 }
 
-#calendar-2 {
-  list-style: none;
-}
-#calendar-2 h4 {
-  font-size: 30px;
-}
-#calendar-2 td {
-  font-size: 31px;
-}
-
 #wp-calendar {
   width: 100%;
 }
@@ -534,6 +589,16 @@ svg {
   background: #dcdcdc52;
 }
 
+.contact-ul {
+  padding-left: 0;
+}
+
+.contact-box {
+  background-color: #ffc006;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
 .contact-box ul {
   list-style: none;
   padding-left: none;
@@ -559,4 +624,12 @@ svg {
 }
 .readmore-link:hover {
   background-color: #ce9c04;
+}
+
+.comment-body {
+  background: #dcdcdc52;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
 }

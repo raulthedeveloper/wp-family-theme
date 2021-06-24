@@ -13,6 +13,8 @@
   </head>
   <body>
     <div class="container-fluid">
+    <?php get_template_part('includes/section','socialmedia' ); ?>
+
         <section class="hero">
           
 

@@ -110,7 +110,6 @@ $section6 = get_field('section_6');
 <div class="row" data-aos="fade-up">
     <div class="col-md-6 col-sm-12">
     <?php echo $section2 ?>
-    <button  class="site-button d-block">Call To Action</button>
 
     </div>
 
@@ -132,8 +131,7 @@ $section6 = get_field('section_6');
 
     <div class="col-md-6 col-sm-12">
     <?php echo $section3 ?>
-        <button  class="site-button d-block">Call To Action</button>
-
+    
     </div>
 </div>
 </section>
@@ -144,7 +142,6 @@ $section6 = get_field('section_6');
 <div class="row" data-aos="fade-up">
     <div class="col-md-6 col-sm-12">
     <?php echo $section4 ?>
-    <button  class="site-button d-block">Call To Action</button>
 
     </div>
 
@@ -166,8 +163,7 @@ $section6 = get_field('section_6');
 
     <div class="col-md-6 col-sm-12">
     <?php echo $section5 ?>
-        <button  class="site-button d-block">Call To Action</button>
-
+    
     </div>
 </div>
 </section>
@@ -178,7 +174,6 @@ $section6 = get_field('section_6');
 <div class="row" data-aos="fade-up">
     <div class="col-md-6 col-sm-12">
     <?php echo $section6 ?>
-    <button  class="site-button d-block">Call To Action</button>
 
     </div>
 

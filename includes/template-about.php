@@ -52,12 +52,12 @@ Template Name: About Us
             <?php endif?>
         </div>
     </div>
-    <hr>
+    
 
     
 
     <div class="row">
-                <h2 class="text-center mb-5">The Team</h2>
+                
 
 
 
@@ -72,10 +72,15 @@ Template Name: About Us
     $the_query = new WP_Query( $args );
  
         // The Loop
-        if ( $the_query->have_posts() ) {
-           
-            while ( $the_query->have_posts() ) {
+        if ( $the_query->have_posts() ) { ?>
+        
+        <!-- if there are no team members -->
+<hr>
+           <h2 class="text-center mb-5">The Team</h2> 
+
+           <?php while ( $the_query->have_posts() ) {
                  $the_query->the_post(); ?>
+
 
 
 <div class="col-md-3 employee-image mb-3">
@@ -96,10 +101,7 @@ Template Name: About Us
 
                 
            <?php }
-        } else {
-            echo 'no post where found';
-            // no posts found
-}
+        } 
         /* Restore original Post Data */
             wp_reset_postdata();
     

@@ -7,44 +7,44 @@ Template Name: Contact Us
 
 <div class="container">
 
-    <div class="row d-flex">
-        <div class="col-md-4 col-sm-13 mb-3" data-aos="fade-in" data-aos-duration="2000" id="left-contact-square">
-            <div class="contact-squares">
-                <h4>Mailing Address</h4>
-                <ul>
-                    <li>The Municipal Building</li>
-                    <li>5580 Municipal DR</li>
-                    <li>Tobyhanna PA 18466</li>
-                </ul>
-            </div>
-        </div>
+    <div class="row">
+    <div class="col-md-5">
+    
+    <div >
+    
+    <div class="m-auto">
+    <ul class="contact-ul">
+        <li class="contact-box">
+            <span>Mailing Address</span><br>
+            The Municipal Building <br>
+            5580 Municipal DR <br>
+            Tobyhanna, Pa 18466
+        </li>
+        <li class="contact-box">
+            <span>Email Address</span><br>
+            Nelsi@thefirstbond.org
+        </li>
+        <li class="contact-box">
+            <span>Telephone</span><br>
+            646-820-5089
 
-        <div class="col-md-4 col-sm-13 mb-3" data-aos="fade-in" data-aos-duration="2000">
-        <div class="contact-squares">
-                <h4>Email Address</h4>
-                <ul>
-                    <li>Nelsi@thefirstbond.com</li>
-                </ul>
-            </div>
-        </div>
+        </li>
+    </ul>
+    </div>
+    
+    </div>
+    
 
-        <div class="col-md-4 col-sm-13 mb-3" id="right-contact-square" data-aos="fade-in" data-aos-duration="2000">
-        <div class="contact-squares">
-                <h4>Mailing Address</h4>
-                <ul>
-                    <li>The Municipal Building</li>
-                    <li>5580 Municipal DR</li>
-                    <li>Tobyhanna PA 18466</li>
-                </ul>
-            </div>
-        </div>
     </div>
 
-    <div class="row">
-        
-            <?php get_template_part('includes/contact','form'); ?>
+
+    <div class="col-md-7">
+    <?php get_template_part('includes/contact','form'); ?>
+    </div>
        
     </div>
+
+   
 </div>
 
 

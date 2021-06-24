@@ -4,6 +4,15 @@
     text-align: center;
     
 
+    list-style: none;
+
+    h4{
+        font-size: 30px;
+    }
+
+    td{
+        font-size: initial;
+    }
    
     @include widget-header($calendar:true);
     
@@ -12,3 +21,4 @@
         text-align: center;
     }
 }
+

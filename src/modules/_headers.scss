@@ -45,6 +45,10 @@
     display: none;
 }
 
+#top-contact{
+    padding:.2rem
+}
+
 @media only screen and (max-width:767px){
     .secondary-header{
         margin-bottom: 4rem;
@@ -62,8 +66,12 @@
     }
 }
 
-@media only screen and (max-width: $small){
+
+
+@media only screen and (max-width: 767px){
     
-    
+    #top-contact{
+        display: none;
+    }
 
 }
