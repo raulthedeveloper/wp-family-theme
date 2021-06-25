@@ -10,6 +10,9 @@
 
             $categories = get_the_category();
             $category_id = $categories[0]->cat_ID;
+
+            // echo get_category_link($cat) . '<br>';
+            // echo get_cat_name($cat->cat_ID ). ', ' ;
             ?>
 
             <div class="col-md-5">
@@ -18,20 +21,38 @@
                         <span><?php echo get_the_date('l jS F, Y') ?></span>
                         <h1 class="display-4"><?php the_title(); ?></h1>
                        <h5 class="lead">
-                           <span class="d-block">
-                           By:<?php echo "Raul" ?> <?php echo "Rodriguez" ?>
+                           <span class="d-block mb-2">
+                           By: <?php echo wp_get_current_user()->data->display_name ?>
                         </span>
                          
-                        <span class="d-block">
-                            Category:<?php echo get_cat_name($category_id) ?>
+                        <span class="mr-2">
+                            Category:
                     </span>
+                    <?php 
+                                foreach($categories as $cat):?>
+                                    
+                                    <a class="btn btn-dark mb-1" href="<?php echo get_category_link($cat) ?>"><?php echo get_cat_name($cat->cat_ID ) ?></a>
+                                    
+
+                           <?php endforeach ?>
                         </h5> 
 
-                        
                     </div>
                 </div>
 
+                
+<?php 
 
+// var_dump(get_categories()[0]);
+// var_dump(get_cat_name($categories[0]->cat_ID));
+// var_dump(get_the_category());
+// var_dump(get_category_link($categories))
+// var_dump($categories);
+// foreach($categories as $cat){
+//     echo get_category_link($cat) . '<br>';
+//     echo get_cat_name($cat->cat_ID ). '<br>';
+// }
+?>
 
 
 
