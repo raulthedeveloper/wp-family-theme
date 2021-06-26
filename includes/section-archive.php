@@ -9,13 +9,13 @@
 
     <?php if(has_post_thumbnail()): ?>
 
-      <img class="img-fluid"   src="<?php the_post_thumbnail_url(); ?>" alt="">
+      <img class="archive-img"   src="<?php the_post_thumbnail_url(); ?>" alt="">
 
    <?php endif?>
 
    <?php if(!has_post_thumbnail()): ?>
 
-<img class="img-fluid"   src="https://eagle-sensors.com/wp-content/uploads/unavailable-image.jpg" alt="">
+<img class="archive-img"   src="https://eagle-sensors.com/wp-content/uploads/unavailable-image.jpg" alt="">
 
 <?php endif?>
    

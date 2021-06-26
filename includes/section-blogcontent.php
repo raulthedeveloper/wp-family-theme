@@ -26,7 +26,7 @@ if($tags):?>
    foreach($categories as $cat):
 ?>
 
-<a class="btn btn-dark" href="<?php echo get_category_link($cat->term_id ) ?>"><?php echo $cat->name; ?></a>
+<a class="btn btn-dark mb-1" href="<?php echo get_category_link($cat->term_id ) ?>"><?php echo $cat->name; ?></a>
 <?php endforeach ?>
 
 <hr>

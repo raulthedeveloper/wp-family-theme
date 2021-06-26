@@ -19,7 +19,7 @@
 #calendar-2 h4 {
   border-bottom: solid 1px;
   padding-bottom: 0.5rem;
-  font-size: 30px;
+  font-size: 2vw;
 }
 #calendar-2 td {
   font-weight: 200;
@@ -379,7 +379,7 @@ section {
 .widget_archive h4 {
   border-bottom: solid 1px;
   padding-bottom: 0.5rem;
-  font-size: 30px;
+  font-size: 2vw;
 }
 .widget_archive label {
   display: none;
@@ -414,7 +414,7 @@ section {
 .widget_categories h4 {
   border-bottom: solid 1px;
   padding-bottom: 0.5rem;
-  font-size: 30px;
+  font-size: 2vw;
 }
 .widget_categories label {
   display: none;
@@ -632,4 +632,32 @@ section {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
+}
+
+.archive-img {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (min-width: 767px) {
+  .archive-img {
+    height: 280px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /*Small smartphones [325px -> 425px]*/
+  .carousel-item img {
+    height: 480px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .btn-success {
+    width: 100%;
+    padding: 10px;
+  }
+
+  #submit {
+    width: 100%;
+    padding: 10px;
+  }
 }

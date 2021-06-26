@@ -114,7 +114,7 @@ $section6 = get_field('section_6');
     </div>
 
 
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12 order-md-last order-first mb-sm-3">
     <img class="img-fluid" src="<?php templateImage('section_2_image') ?>" alt="<?php templateImage('section_2_image',true) ?>">
 
     </div>
@@ -125,7 +125,7 @@ $section6 = get_field('section_6');
 <section class="light-grey-section">
 <div class="container">
 <div class="row" data-aos="fade-up">
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12 mb-sm-3">
         <img class="img-fluid" src="<?php templateImage('section_3_image') ?>" alt="<?php templateImage('section_3_image',true) ?>">
     </div>
 
@@ -146,7 +146,7 @@ $section6 = get_field('section_6');
     </div>
 
 
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12 order-md-last order-first mb-sm-3">
     <img class="img-fluid" src="<?php templateImage('section_4_image') ?>" alt="<?php templateImage('section_4_image',true) ?>">
 
     </div>
@@ -157,7 +157,7 @@ $section6 = get_field('section_6');
 <section class="light-grey-section">
 <div class="container">
 <div class="row" data-aos="fade-up">
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12 mb-sm-3">
         <img class="img-fluid" src="<?php templateImage('section_5_image') ?>" alt="<?php templateImage('section_5_image',true) ?>">
     </div>
 
@@ -178,7 +178,7 @@ $section6 = get_field('section_6');
     </div>
 
 
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12  order-md-last order-first mb-sm-3">
     <img class="img-fluid" src="<?php templateImage('section_6_image') ?>" alt="<?php templateImage('section_6_image',true) ?>">
 
     </div>

@@ -5,6 +5,21 @@ Template Name: Contact Us
 ?>
 <?php get_header(); ?>
 
+
+
+
+<?php
+
+$args = array(  
+    'post_type' => 'business info',
+    'post_status' => 'publish',
+    'post_per_page' => 1
+)
+    ?>
+
+
+
+
 <div class="container">
 
     <div class="row">
@@ -13,23 +28,38 @@ Template Name: Contact Us
     <div >
     
     <div class="m-auto">
+
+    <?php
+
+// The Query
+$the_query = new WP_Query( $args );
+ 
+// The Loop
+if ( $the_query->have_posts() ): ?>
+  <?php  while ( $the_query->have_posts() ): 
+    $the_query->the_post();
+    ?>
+
     <ul class="contact-ul">
         <li class="contact-box">
             <span>Mailing Address</span><br>
-            The Municipal Building <br>
+            <!-- The Municipal Building <br>
             5580 Municipal DR <br>
-            Tobyhanna, Pa 18466
+            Tobyhanna, Pa 18466 -->
+            <?php echo get_field('business_address') ? get_field('business_address') : "Please Add Address" ?>
         </li>
         <li class="contact-box">
             <span>Email Address</span><br>
-            Nelsi@thefirstbond.org
+            <?php echo get_field('business_email') ? get_field('business_email') : "Please Add Email"?>
         </li>
         <li class="contact-box">
             <span>Telephone</span><br>
-            646-820-5089
+            <?php echo get_field('business_phone') ? get_field('business_phone') : "Please Add Phone Number" ?>
 
         </li>
     </ul>
+    <?php endwhile ?>
+    <?php endif ?>
     </div>
     
     </div>

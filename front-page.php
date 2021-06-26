@@ -11,14 +11,14 @@ $section3_content = nl2br(get_field('our_vision'));
     <section class="two-col" data-aos="fade-up">
         <div class="container">
             <div class="row">
-                <div class="col-md-6" data-aos="fade-in" data-aos-duration="2000">
+                <div class="col-md-6 " data-aos="fade-in" data-aos-duration="2000">
                     
                 <?php echo $section1_content?>
 
                
                     
                 </div>
-                <div class="col-md-6 d-flex justify-content-center" data-aos="fade-in" data-aos-duration="2000">
+                <div class="col-md-6  order-md-last order-first mb-sm-2 d-flex justify-content-center" data-aos="fade-in" data-aos-duration="2000">
                 <img class="img-fluid" src="<?php echo templateImage('image_1') ?>" alt="<?php echo templateImage('image_1') ?>">
                 
 
@@ -60,7 +60,7 @@ $section3_content = nl2br(get_field('our_vision'));
                     
                 <?php echo get_field('our_programs')?>
 
-                <a href="<?php echo get_page_link( get_page_by_title( "programs" )->ID ); ?>" class="btn btn-success">See More</a>
+                <a href="<?php echo get_page_link( get_page_by_title( "programs" )->ID ); ?>" class="btn btn-success ">See More</a>
 
                     
                 </div>
@@ -70,7 +70,7 @@ $section3_content = nl2br(get_field('our_vision'));
         
 
     </section>
-
+<?php echo get_field('business_address') ?>
     
 
 <!-- Events Section -->
@@ -97,9 +97,8 @@ $section3_content = nl2br(get_field('our_vision'));
     <section class="two-col" aos-data="fade-up">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 d-flex justify-content-center" data-aos="fade-in" data-aos-duration="2000">
+                <div class="col-md-6  d-flex justify-content-center" data-aos="fade-in" data-aos-duration="2000">
                 <img class="img-fluid" src="<?php echo templateImage('image_2') ?>" alt="<?php echo templateImage('image_2') ?>">
-
 
                 <?php if(!get_field('image_2')): ?>
                     <img class="img-fluid" src="<?php echo get_template_directory_uri() . '/images/unavailable-image.jpeg' ;?>" />

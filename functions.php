@@ -142,8 +142,8 @@ function team_post_type(){
         ),
         'hierarchical' => true,
         'public' => true,
-        'has_archive' => true,
-        'supports' => array('title','editor','thumbnail'),
+        'has_archive' => false,
+        'supports' => array('title','thumbnail'),
         'menu_icon' => 'dashicons-businessman'
     );
 
@@ -151,6 +151,27 @@ function team_post_type(){
 }
 
 add_action('init','Team_post_type' );
+
+
+function business_contact_type(){
+
+    $args = array(
+        'labels' => array(
+            'name' => "Business Info",
+            'singular_name' => "Business"
+        ),
+        'hierarchical' => true,
+        'public' => true,
+        'has_archive' => false,
+        'supports' => array('title','thumbnail'),
+        'menu_icon' => 'dashicons-building'
+    );
+    register_post_type('business info',$args);
+}
+
+add_action('init','business_contact_type');
+
+
 
 
 /////////// Taxonomies ///////////
