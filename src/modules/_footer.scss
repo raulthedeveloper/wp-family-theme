@@ -14,6 +14,11 @@ footer{
    left: 0;
    bottom: 0;
    width: 100%;
+
+
+   svg{
+       margin: 10px;
+   }
 }
 
 
@@ -48,13 +53,19 @@ footer {
     
 }
 
+.footer-lists{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 @media only screen and (max-width: $small){
     footer {
         h4{
             text-align: center;
             margin-bottom: 1rem;
-            font-size: 2.2rem;
-            letter-spacing:5px;
+            font-size: 1.2rem;
+            letter-spacing:1px;
             font-weight: 300;
         }
     
@@ -66,16 +77,28 @@ footer {
     
         a{
             text-decoration: none;
-            font-size: 1.5rem;
-            letter-spacing: 5px; 
+            font-size: 1rem;
+            letter-spacing: 1px; 
         }
 
         .footer-nav{
             margin-bottom: 2rem;
+            
         }
+
+        
     }
+
+    
 
     .footer-logo{
         width: 100%;
     }
+
+    .footer-lists{
+        flex-wrap: wrap;
+    justify-content: center;
 }
+    }
+
+

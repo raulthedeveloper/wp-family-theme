@@ -1,12 +1,12 @@
-<?php get_template_part('includes/section','head' ); ?>
+<?php get_template_part('includes/sections/section','head' ); ?>
 
     <div class="container-fluid">
-    <?php get_template_part('includes/section','socialmedia' ); ?>
+    <?php get_template_part('includes/sections/section','socialmedia' ); ?>
 
         <section class="hero">
           
 
-        <?php get_template_part('includes/section','navbar'); ?>
+        <?php get_template_part('includes/sections/section','navbar'); ?>
 
 
               <div class="w-100 h-50 d-flex justify-content-center ">

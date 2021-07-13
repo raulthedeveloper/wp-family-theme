@@ -10,9 +10,6 @@
 
             $categories = get_the_category();
             $category_id = $categories[0]->cat_ID;
-
-            // echo get_category_link($cat) . '<br>';
-            // echo get_cat_name($cat->cat_ID ). ', ' ;
             ?>
 
             <div class="col-md-5">
@@ -41,20 +38,6 @@
                 </div>
 
                 
-<?php 
-
-// var_dump(get_categories()[0]);
-// var_dump(get_cat_name($categories[0]->cat_ID));
-// var_dump(get_the_category());
-// var_dump(get_category_link($categories))
-// var_dump($categories);
-// foreach($categories as $cat){
-//     echo get_category_link($cat) . '<br>';
-//     echo get_cat_name($cat->cat_ID ). '<br>';
-// }
-?>
-
-
 
 
             </div>
@@ -98,7 +81,7 @@
 
         <div class="col-md-9 col-sm-12">
 
-            <?php get_template_part('includes/section','blogcontent' ); ?>
+            <?php get_template_part('includes/sections/section','blogcontent' ); ?>
             
             
            

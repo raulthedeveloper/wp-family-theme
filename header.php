@@ -1,11 +1,11 @@
-<?php get_template_part('includes/section','head' ); ?>
+<?php get_template_part('includes/sections/section','head' ); ?>
 
-<?php get_template_part('includes/section','socialmedia' ); ?>
+<?php get_template_part('includes/sections/section','socialmedia' ); ?>
 
     <section class="secondary-header" pt-0>
 
     <!-- Mobile Navigation -->
-    <?php get_template_part('includes/section','navbar'); ?>
+    <?php get_template_part('includes/sections/section','navbar'); ?>
 
     <img class="img-fluid" src="<?php echo get_template_directory_uri(). '/images/Firstbondlogo.png' ?>" alt="">
 

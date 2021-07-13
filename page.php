@@ -9,7 +9,7 @@
 
     <div class="row">
         <div class="col-9">
-            <?php get_template_part('includes/section','content' ); ?>
+            <?php get_template_part('includes/sections/section','content' ); ?>
         </div>
 
         <div class="col-3">

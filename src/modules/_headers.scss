@@ -42,6 +42,7 @@
 }
 
 .mobile-nav{
+    margin-top: 1rem;
     display: none;
 }
 
@@ -68,10 +69,14 @@
 
 
 
+
 @media only screen and (max-width: 767px){
     
     #top-contact{
         display: none;
     }
 
+    .navbar-dark .navbar-nav .nav-link{
+        letter-spacing: 10px;
+    }
 }
