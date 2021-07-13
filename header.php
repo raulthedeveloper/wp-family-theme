@@ -1,6 +1,6 @@
 <?php get_template_part('includes/sections/section','head' ); ?>
 
-<?php get_template_part('includes/sections/section','socialmedia' ); ?>
+<?php get_template_part('includes/sections/section','contactbar' ); ?>
 
     <section class="secondary-header" pt-0>
 
@@ -30,7 +30,8 @@
         ?>
     </div>
 </nav>
+
     </section>
-   
+    <?php get_template_part('includes/sections/section','mobilecontactbar' ); ?>
     
    

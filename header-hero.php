@@ -1,7 +1,7 @@
 <?php get_template_part('includes/sections/section','head' ); ?>
 
     <div class="container-fluid">
-    <?php get_template_part('includes/sections/section','socialmedia' ); ?>
+    <?php get_template_part('includes/sections/section','contactbar' ); ?>
 
         <section class="hero">
           
@@ -15,6 +15,7 @@
               </div>
               <h3 class="text-light text-center">Promoting Strong Families</h3>
         </section>
+        <?php get_template_part('includes/sections/section','mobilecontactbar' ); ?>
 
         
     </div>

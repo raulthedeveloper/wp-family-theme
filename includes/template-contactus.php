@@ -22,14 +22,7 @@ $args = array(
 
 <div class="container">
 
-    <div class="row">
-    <div class="col-md-5">
-    
-    <div >
-    
-    <div class="m-auto">
-
-    <?php
+<?php
 
 // The Query
 $the_query = new WP_Query( $args );
@@ -40,39 +33,35 @@ if ( $the_query->have_posts() ): ?>
     $the_query->the_post();
     ?>
 
-    <ul class="contact-ul">
-        <li class="contact-box">
-            <span>Mailing Address</span><br>
+<div class="parent">
+<div class="div1 contact-box"> 
+<span>Mailing Address</span><br>
             <!-- The Municipal Building <br>
             5580 Municipal DR <br>
             Tobyhanna, Pa 18466 -->
             <?php echo get_field('business_address') ? get_field('business_address') : "Please Add Address" ?>
-        </li>
-        <li class="contact-box">
-            <span>Email Address</span><br>
+</div>
+
+<div class="div2 contact-box"> 
+<span>Email Address</span><br>
             <?php echo get_field('business_email') ? get_field('business_email') : "Please Add Email"?>
-        </li>
-        <li class="contact-box">
-            <span>Telephone</span><br>
+</div>
+
+<div class="div3 contact-box"> 
+<span>Telephone</span><br>
             <?php echo get_field('business_phone') ? get_field('business_phone') : "Please Add Phone Number" ?>
+</div>
 
-        </li>
-    </ul>
-    <?php endwhile ?>
+<div class="div4 contact-box"> 
+<?php get_template_part('includes/contact','form'); ?>
+</div>
+</div>
+
+<?php endwhile ?>
     <?php endif ?>
-    </div>
+
+
     
-    </div>
-    
-
-    </div>
-
-
-    <div class="col-md-7">
-    <?php get_template_part('includes/contact','form'); ?>
-    </div>
-       
-    </div>
 
    
 </div>
