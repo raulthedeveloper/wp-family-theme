@@ -601,9 +601,10 @@ section {
 
 .image-span {
   color: white;
+  min-height: 500px;
 }
 .image-span img {
-  height: 500px;
+  height: auto;
   width: 100%;
 }
 

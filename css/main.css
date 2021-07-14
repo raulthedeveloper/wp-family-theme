@@ -20,9 +20,8 @@
 
 
 .image-span{
-    background-image: linear-gradient(#1d1d1e8c, #02020270, transparent),url('https://images.pexels.com/photos/2253879/pexels-photo-2253879.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-    background-position: center;
+    background-position: inherit;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 400px;
+    /* min-height: 700px; */
 }

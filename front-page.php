@@ -1,3 +1,4 @@
+
 <?php get_header('hero'); ?>
 <!-- <h1 class="text-center"><?php the_title(); ?></h1> -->
 
@@ -10,7 +11,7 @@
 
                 <?php echo get_field('what_is_the_first_bond')?>
 
-                <a class="btn btn-success" href="#"> Read More</a>
+                <a class="btn btn-success" href="<?php echo home_url() . '/about-us' ?>"> Read More</a>
 
             </div>
             <div class="col-md-6  order-md-last order-first mb-sm-2 d-flex justify-content-center" data-aos="fade-in"
@@ -27,7 +28,7 @@
 
 </section>
 
-<section class="image-span" data-aos="fade-up">
+<section class="image-span" style="background-image: linear-gradient(#1d1d1e8c, #02020270, transparent),url('<?php echo templateImage('image_2')['sizes']['medium'] ?>" data-aos="fade-up">
     <div class="container">
         <div class="row">
 
@@ -48,8 +49,8 @@
         <div class="row">
 
             <div class="col-md-6 d-flex justify-content-center" data-aos="fade-in" data-aos-duration="2000">
-                <img class="img-fluid" src="<?php echo templateImage('image_4') ?>"
-                    alt="<?php echo templateImage('image_4') ?>">
+                <img class="img-fluid" src="<?php echo templateImage('image_3')['sizes']['medium'] ?>"
+                    alt="<?php echo templateImage('image_3') ?>">
 
 
 
@@ -74,13 +75,12 @@
 
 
 <!-- Events Section -->
-<section class="image-span" style="background:url('<?php echo get_field('image_3')['sizes']['large'] ?>');      background-repeat:none; background-size:cover;  background-position: center; color:white;
+<section class="image-span" style="background:url('<?php echo get_field('image_4')['sizes']['large'] ?>');      background-repeat:none; background-size:cover;  background-position: center; color:white;
 
 " data-aos="fade-up">
     <div class="container">
         <div class="row">
 
-            <!-- style="background-image: -->
             <?php echo get_field('section_4') ?>
 
             <a href="<?php echo get_home_url() . '/events'; ?>" class="btn btn-success  w-25 d-block m-auto">See
@@ -99,10 +99,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6  d-flex justify-content-center" data-aos="fade-in" data-aos-duration="2000">
-                <img class="img-fluid" src="<?php echo templateImage('image_2') ?>"
+                <img class="img-fluid" src="<?php echo templateImage('image_5')['sizes']['medium'] ?>"
                     alt="<?php echo templateImage('image_2') ?>">
 
-                <?php if(!get_field('image_2')): ?>
+                <?php if(!get_field('image_5')): ?>
                 <img class="img-fluid"
                     src="<?php echo get_template_directory_uri() . '/images/unavailable-image.jpeg' ;?>" />
                 <?php endif ?>
