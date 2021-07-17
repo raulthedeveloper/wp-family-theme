@@ -41,6 +41,10 @@ function load_js()
 
     wp_enqueue_script('jquery');
 
+    wp_register_script('my_scripts',get_template_directory_uri(  ) . '.js/my_scripts.js','jquery',false,true);
+    wp_enqueue_script('my_scripts');
+
+
  
     wp_register_script( 'app', get_template_directory_uri(  ) . '/dist/app.js', ['jquery'], 1, true );
     wp_enqueue_script('app');

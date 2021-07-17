@@ -126,17 +126,16 @@ if ( $the_query->have_posts() ): ?>
 
 
 
-
 </footer>
+<div class="bg-dark p-3  text-center">
+    <a class="raul" target="_blank" href="http://raulthedeveloper.com/">Website Create by Raul The Developer</a>
+</div>
 
 <?php wp_footer(  )?>
 
 <script>
 
-
-    AOS.init({
-        once: true
-    })
+    
 </script>
 
 </body>

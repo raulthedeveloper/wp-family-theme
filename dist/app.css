@@ -725,6 +725,43 @@ section {
   height: auto;
 }
 
+.raul {
+  text-decoration: none;
+  color: #ffbd21;
+  font-size: 1.3rem;
+  letter-spacing: 5px;
+}
+.raul:hover {
+  color: red;
+}
+
+.wpedon_paypalbuttonimage {
+  background: #212529;
+  color: #ffff;
+  letter-spacing: 4px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 6px;
+  margin: auto;
+  width: 100%;
+  padding: 4rem;
+}
+.wpedon_paypalbuttonimage h4 {
+  border-bottom: solid 1px;
+  padding-bottom: 0.5rem;
+  font-size: 2vw;
+}
+.wpedon_paypalbuttonimage label {
+  display: none;
+}
+.wpedon_paypalbuttonimage select {
+  background-color: #198753;
+  color: #ffff;
+  padding: 7px;
+  border-radius: 5px;
+  width: 100%;
+}
+
 @media only screen and (min-width: 767px) {
   .archive-img {
     height: 280px;
@@ -734,6 +771,34 @@ section {
   /*Small smartphones [325px -> 425px]*/
   .carousel-item img {
     height: 480px;
+  }
+
+  .wpedon_paypalbuttonimage {
+    background: #212529;
+    color: #ffff;
+    letter-spacing: 4px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 6px;
+    margin: auto;
+    width: 100%;
+    padding: 4rem;
+    display: none;
+  }
+  .wpedon_paypalbuttonimage h4 {
+    border-bottom: solid 1px;
+    padding-bottom: 0.5rem;
+    font-size: 2vw;
+  }
+  .wpedon_paypalbuttonimage label {
+    display: none;
+  }
+  .wpedon_paypalbuttonimage select {
+    background-color: #198753;
+    color: #ffff;
+    padding: 7px;
+    border-radius: 5px;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 575px) {
