@@ -15,7 +15,7 @@
 
         <!-- if there are no team members -->
 <hr>
-           <h2 class="text-center mb-5">The Team</h2> 
+           <h2 class="text-center mb-5">Board of Advisors</h2> 
 
            <?php while ( $the_query->have_posts() ) {
                  $the_query->the_post(); ?>
