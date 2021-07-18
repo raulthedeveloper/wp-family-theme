@@ -25,3 +25,10 @@
     background-size: cover;
     /* min-height: 700px; */
 }
+
+
+@media only screen and (max-width:767px){
+    .hero img{
+        height: 50%;
+    }
+}

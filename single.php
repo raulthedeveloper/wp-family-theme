@@ -72,6 +72,13 @@
                 
                 <?php endif; ?>
 
+                <?php if(is_active_sidebar( 'donate-sidebar' )): ?>
+            <div class="donate-widget">
+                <h4>Donate</h4>
+                <?php dynamic_sidebar( 'donate-sidebar' ); ?>
+            </div>
+            <?php endif; ?>
+
             </div>
 
 

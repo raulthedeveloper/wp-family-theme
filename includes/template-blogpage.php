@@ -48,9 +48,20 @@ Template Name:Blog Page
             <?php dynamic_sidebar( 'blog-sidebar' ); ?>
             <?php endif; ?>
 
+            
+            <?php if(is_active_sidebar( 'donate-sidebar' )): ?>
+            <div class="donate-widget">
+                <h4>Donate</h4>
+                <?php dynamic_sidebar( 'donate-sidebar' ); ?>
+            </div>
+            
+            <?php endif; ?>
+
             <?php if(is_active_sidebar( 'page-sidebar' )): ?>
             <?php dynamic_sidebar( 'page-sidebar' ); ?>
             <?php endif; ?>
+
+            
         </div>
 
 
@@ -80,10 +91,15 @@ Template Name:Blog Page
             
         </div>
 
-        <a class="btn btn-success w-25 d-block m-auto" href=" <?php echo home_url() . "/" . date('Y')?>">See More</a>
 
 
     </div>
+
+    <div class="container">
+    <a class="btn btn-success d-block m-auto p-3" href=" <?php echo home_url() . "/" . date('Y')?>">See More</a>
+
+    </div>
+
 
 
 

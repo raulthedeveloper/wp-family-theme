@@ -35,42 +35,42 @@ $section6 = get_field('section_6');
   <div class="carousel-inner">
     <div class="carousel-item active">
     <img src="<?php templateImage('slide_1') ?>" class="d-block w-100" alt="<?php templateImage('slide_1',true) ?>">
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption d-md-block">
       <?php echo get_field('slide_1_excerpt'); ?>
       </div>
     </div>
     <div class="carousel-item">
     <img src="<?php templateImage('slide_2'); ?>" class="d-block w-100" alt="<?php templateImage('slide_2',true) ?>">
 
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption d-md-block">
       <?php echo get_field('slide_2_excerpt'); ?>
       </div>
     </div>
     <div class="carousel-item">
     <img src="<?php templateImage('slide_3'); ?>" class="d-block w-100" alt="<?php templateImage('slide_3',true) ?>">
 
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption d-md-block">
       <?php echo get_field('slide_3_excerpt'); ?>
       </div>
     </div>
     <div class="carousel-item">
     <img src="<?php templateImage('slide_4'); ?>" class="d-block w-100" alt="<?php templateImage('slide_4',true) ?>">
 
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption d-md-block">
       <?php echo get_field('slide_4_excerpt'); ?>
       </div>
     </div>
     <div class="carousel-item">
     <img src="<?php templateImage('slide_5'); ?>" class="d-block w-100" alt="<?php templateImage('slide_5',true) ?>">
 
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption d-md-block">
       <?php echo get_field('slide_5_excerpt'); ?>
       </div>
     </div>
     <div class="carousel-item">
     <img src="<?php templateImage('slide_6'); ?>" class="d-block w-100" alt="<?php templateImage('slide_6',true) ?>">
 
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption d-md-block">
       <?php echo get_field('slide_6_excerpt'); ?>
       </div>
     </div>

@@ -415,6 +415,20 @@ footer a {
     grid-area: 4/1/5/2;
   }
 }
+.tribe-common .tribe-common-c-btn, .tribe-common a.tribe-common-c-btn {
+  background-color: #ffb300;
+}
+
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.tribe-events-event-image img {
+  width: 100%;
+  height: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -643,15 +657,6 @@ section {
   max-height: 40px;
 }
 
-.tribe-common .tribe-common-c-btn, .tribe-common a.tribe-common-c-btn {
-  background-color: #ffb300;
-}
-
-.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
 #wp-calendar {
   width: 100%;
 }
@@ -668,7 +673,7 @@ section {
 
 .carousel-item img {
   height: 550px;
-  filter: brightness(0.7);
+  filter: brightness(0.5);
 }
 
 .light-grey-section {
@@ -735,31 +740,35 @@ section {
   color: red;
 }
 
-.wpedon_paypalbuttonimage {
+.donate-widget {
   background: #212529;
   color: #ffff;
   letter-spacing: 4px;
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-radius: 6px;
-  margin: auto;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
   width: 100%;
-  padding: 4rem;
 }
-.wpedon_paypalbuttonimage h4 {
+.donate-widget h4 {
   border-bottom: solid 1px;
   padding-bottom: 0.5rem;
   font-size: 2vw;
 }
-.wpedon_paypalbuttonimage label {
+.donate-widget label {
   display: none;
 }
-.wpedon_paypalbuttonimage select {
+.donate-widget select {
   background-color: #198753;
   color: #ffff;
   padding: 7px;
   border-radius: 5px;
   width: 100%;
+}
+.donate-widget .wpedon_paypalbuttonimage {
+  width: 60%;
 }
 
 @media only screen and (min-width: 767px) {
@@ -769,11 +778,32 @@ section {
 }
 @media only screen and (max-width: 767px) {
   /*Small smartphones [325px -> 425px]*/
-  .carousel-item img {
-    height: 480px;
+  #mobile-top-contact {
+    margin-bottom: 2rem;
   }
 
-  .wpedon_paypalbuttonimage {
+  section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .carousel-item img {
+    height: 430px;
+  }
+
+  .col-md-6 img {
+    margin-bottom: 1rem;
+  }
+
+  .carousel-caption h2 {
+    font-weight: bold;
+    border-bottom: solid 2px white;
+  }
+  .carousel-caption p {
+    font: 0.75rem;
+  }
+
+  .donate-widget {
     background: #212529;
     color: #ffff;
     letter-spacing: 4px;
@@ -785,15 +815,15 @@ section {
     padding: 4rem;
     display: none;
   }
-  .wpedon_paypalbuttonimage h4 {
+  .donate-widget h4 {
     border-bottom: solid 1px;
     padding-bottom: 0.5rem;
     font-size: 2vw;
   }
-  .wpedon_paypalbuttonimage label {
+  .donate-widget label {
     display: none;
   }
-  .wpedon_paypalbuttonimage select {
+  .donate-widget select {
     background-color: #198753;
     color: #ffff;
     padding: 7px;
@@ -801,7 +831,17 @@ section {
     width: 100%;
   }
 }
+#events-btn {
+  width: 11%;
+  display: block;
+  margin: auto;
+}
+
 @media only screen and (max-width: 575px) {
+  #events-btn {
+    width: 95%;
+  }
+
   .btn-success {
     width: 100%;
     padding: 10px;

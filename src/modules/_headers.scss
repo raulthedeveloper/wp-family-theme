@@ -2,6 +2,8 @@
 
 
 
+
+
 .secondary-header{
     background-color: black;
     margin-bottom: 6rem;
@@ -56,9 +58,8 @@
 }
 
 
-@media only screen and (max-width:767px){
+@media only screen and (max-width:$medium){
 
-    
 
     .secondary-header{
         margin-bottom: 0;

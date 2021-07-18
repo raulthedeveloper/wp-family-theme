@@ -28,7 +28,7 @@
 
 </section>
 
-<section class="image-span" style="background-image: linear-gradient(#1d1d1e8c, #02020270, transparent),url('<?php echo templateImage('image_2')['sizes']['medium'] ?>" data-aos="fade-up">
+<section class="image-span" style="padding-top:3rem; background-image: linear-gradient(#1d1d1e8c, #02020270, transparent),url('<?php echo templateImage('image_2')['sizes']['medium'] ?>" data-aos="fade-up">
     <div class="container">
         <div class="row">
 
@@ -48,7 +48,7 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-md-6 d-flex justify-content-center" data-aos="fade-in" data-aos-duration="2000">
+            <div class="col-md-6 d-flex justify-content-center"  data-aos="fade-in" data-aos-duration="2000">
                 <img class="img-fluid" src="<?php echo templateImage('image_3')['sizes']['medium'] ?>"
                     alt="<?php echo templateImage('image_3') ?>">
 
@@ -75,21 +75,21 @@
 
 
 <!-- Events Section -->
-<section class="image-span" style="background:url('<?php echo get_field('image_4')['sizes']['large'] ?>');      background-repeat:none; background-size:cover;  background-position: center; color:white;
+<section class="image-span" style="padding-top:3rem;background:url('<?php echo get_field('image_4')['sizes']['large'] ?>'); background-repeat:none; background-size:cover;  background-position: center; color:white;
 
 " data-aos="fade-up">
     <div class="container">
-        <div class="row">
+    <?php echo get_field('section_4') ?>
 
-            <?php echo get_field('section_4') ?>
+            
+<a href="<?php echo get_home_url() . '/events'; ?>" class="btn d-table m-auto btn-success">See
+    More</a>
+    </div>
 
-            <a href="<?php echo get_home_url() . '/events'; ?>" class="btn btn-success  w-25 d-block m-auto">See
-                More</a>
-            <!-- <p data-aos="fade-up" class="text-light" data-aos-duration="2000"><?php echo $section2_content ?></p> -->
+            
 
+            
 
-
-        </div>
 </section>
 
 
