@@ -33,7 +33,7 @@ if ( $the_query->have_posts() ): ?>
     $the_query->the_post();
     ?>
 
-<div class="parent">
+<div class="form-grid">
 <div class="div1 contact-box"> 
 <span>Mailing Address</span><br>
             <!-- The Municipal Building <br>

@@ -28,6 +28,13 @@
   text-align: center;
 }
 
+.header-contact {
+  margin-right: 1rem;
+}
+.header-contact span {
+  font-weight: bold;
+}
+
 .secondary-header {
   background-color: black;
   margin-bottom: 6rem;
@@ -119,7 +126,7 @@
   }
 }
 footer {
-  border-top: solid #ffc006 3rem;
+  border-top: solid #ffbd21 3rem;
   background-color: black;
   padding: 2rem;
   margin-top: 3rem;
@@ -133,7 +140,6 @@ footer {
 footer svg {
   margin: 10px;
 }
-
 footer h4 {
   text-align: center;
   margin-bottom: 1rem;
@@ -153,7 +159,6 @@ footer a {
   margin-bottom: 2rem;
   width: 400px;
 }
-
 .footer-lists {
   display: flex;
   justify-content: space-between;
@@ -183,12 +188,10 @@ footer a {
   footer .footer-nav {
     margin-bottom: 2rem;
   }
-
-  .footer-logo {
+  footer .footer-logo {
     width: 100%;
   }
-
-  .footer-lists {
+  footer .footer-lists {
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -366,7 +369,7 @@ footer a {
   font-weight: bold;
 }
 
-.parent {
+.form-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: repeat(6, 1fr);
@@ -395,7 +398,7 @@ footer a {
     margin-bottom: 1rem;
   }
 
-  .parent {
+  .form-grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr) 4fr;
@@ -431,68 +434,6 @@ footer a {
 .tribe-events-event-image img {
   width: 100%;
   height: 100%;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-p {
-  font-size: 18px;
-}
-
-section {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
-.svg-header {
-  color: black;
-  margin-right: 0.2rem;
-}
-.svg-header:hover {
-  color: #404040;
-}
-
-.icon-box span {
-  margin-right: 0.5rem;
-  font-weight: bold;
-}
-
-.header-contact {
-  margin-right: 1rem;
-}
-.header-contact span {
-  font-weight: bold;
-}
-
-.widget_archive {
-  list-style: none;
-  text-align: center;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  background: #212529;
-  color: #ffff;
-  letter-spacing: 4px;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  border-radius: 6px;
-}
-.widget_archive h4 {
-  border-bottom: solid 1px;
-  padding-bottom: 0.5rem;
-  font-size: 2vw;
-}
-.widget_archive label {
-  display: none;
-}
-.widget_archive select {
-  background-color: #198753;
-  color: #ffff;
-  padding: 7px;
-  border-radius: 5px;
-  width: 100%;
 }
 
 .blog-header {
@@ -562,12 +503,143 @@ section {
 }
 
 @media only screen and (max-width: 767px) {
-  select {
+  .date-box {
+    background-color: #ffbd21;
+    width: 50px;
+    height: 50px;
+    float: left;
+    position: relative;
+    bottom: 4rem;
+    color: black;
+    text-align: center;
+  }
+}
+.widget_archive {
+  list-style: none;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: #212529;
+  color: #ffff;
+  letter-spacing: 4px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 6px;
+}
+.widget_archive h4 {
+  border-bottom: solid 1px;
+  padding-bottom: 0.5rem;
+  font-size: 2vw;
+}
+.widget_archive label {
+  display: none;
+}
+.widget_archive select {
+  background-color: #198753;
+  color: #ffff;
+  padding: 7px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.donate-widget {
+  background: #212529;
+  color: #ffff;
+  letter-spacing: 4px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.donate-widget h4 {
+  border-bottom: solid 1px;
+  padding-bottom: 0.5rem;
+  font-size: 2vw;
+}
+.donate-widget label {
+  display: none;
+}
+.donate-widget select {
+  background-color: #198753;
+  color: #ffff;
+  padding: 7px;
+  border-radius: 5px;
+  width: 100%;
+}
+.donate-widget .wpedon_paypalbuttonimage {
+  width: 60%;
+}
+
+@media only screen and (max-width: 767px) {
+  .widget {
+    display: none;
+  }
+
+  #wp-calendar {
     width: 100%;
   }
 
-  .widget {
+  .donate-widget {
+    background: #212529;
+    color: #ffff;
+    letter-spacing: 4px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 6px;
+    margin: auto;
+    width: 100%;
+    padding: 4rem;
     display: none;
+  }
+  .donate-widget h4 {
+    border-bottom: solid 1px;
+    padding-bottom: 0.5rem;
+    font-size: 2vw;
+  }
+  .donate-widget label {
+    display: none;
+  }
+  .donate-widget select {
+    background-color: #198753;
+    color: #ffff;
+    padding: 7px;
+    border-radius: 5px;
+    width: 100%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 18px;
+}
+
+section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.svg-header {
+  color: black;
+  margin-right: 0.2rem;
+}
+.svg-header:hover {
+  color: #404040;
+}
+
+.icon-box span {
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 767px) {
+  select {
+    width: 100%;
   }
 
   #right-contact-square {
@@ -578,17 +650,6 @@ section {
     padding-left: 12px;
   }
 }
-.date-box {
-  background-color: #ffbd21;
-  width: 50px;
-  height: 50px;
-  float: left;
-  position: relative;
-  bottom: 4rem;
-  color: black;
-  text-align: center;
-}
-
 .container-fluid {
   padding-left: 0;
   padding-right: 0;
@@ -600,7 +661,7 @@ section {
 }
 
 .site-button:hover {
-  background-color: #ffb300;
+  background-color: #ffbd21;
 }
 
 .nav-link {
@@ -647,22 +708,10 @@ section {
   height: 200px;
 }
 
-.previous-button {
-  margin-left: 1rem;
-}
-
-.next-button {
-  margin-right: 1rem;
-}
-
 .post-btn-container {
   display: flex;
   justify-content: space-between;
   max-height: 40px;
-}
-
-#wp-calendar {
-  width: 100%;
 }
 
 .card-archive:hover {
@@ -689,7 +738,7 @@ section {
 }
 
 .contact-box {
-  background-color: #ffc006;
+  background-color: #ffbd21;
   padding: 1rem;
   text-align: center;
   font-size: 1.5rem;
@@ -744,37 +793,6 @@ section {
   color: red;
 }
 
-.donate-widget {
-  background: #212529;
-  color: #ffff;
-  letter-spacing: 4px;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  border-radius: 6px;
-  padding: 1rem;
-  text-align: center;
-  margin-bottom: 1rem;
-  width: 100%;
-}
-.donate-widget h4 {
-  border-bottom: solid 1px;
-  padding-bottom: 0.5rem;
-  font-size: 2vw;
-}
-.donate-widget label {
-  display: none;
-}
-.donate-widget select {
-  background-color: #198753;
-  color: #ffff;
-  padding: 7px;
-  border-radius: 5px;
-  width: 100%;
-}
-.donate-widget .wpedon_paypalbuttonimage {
-  width: 60%;
-}
-
 @media only screen and (min-width: 767px) {
   .archive-img {
     height: 280px;
@@ -805,34 +823,6 @@ section {
   }
   .carousel-caption p {
     font: 0.75rem;
-  }
-
-  .donate-widget {
-    background: #212529;
-    color: #ffff;
-    letter-spacing: 4px;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    border-radius: 6px;
-    margin: auto;
-    width: 100%;
-    padding: 4rem;
-    display: none;
-  }
-  .donate-widget h4 {
-    border-bottom: solid 1px;
-    padding-bottom: 0.5rem;
-    font-size: 2vw;
-  }
-  .donate-widget label {
-    display: none;
-  }
-  .donate-widget select {
-    background-color: #198753;
-    color: #ffff;
-    padding: 7px;
-    border-radius: 5px;
-    width: 100%;
   }
 }
 #events-btn {

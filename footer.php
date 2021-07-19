@@ -8,12 +8,6 @@ $args = array(
     ?>
 
 
-<?php 
-if(has_nav_menu('footer-col-1')){
-    echo wp_get_nav_menu_name('footer-col-1');
-}
-?>
-
 
 <footer>
     <div class="container">

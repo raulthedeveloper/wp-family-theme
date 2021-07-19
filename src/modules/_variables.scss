@@ -5,6 +5,10 @@ $accent-color:#ffbd21;
 $widget-color:#212529;
 $widget-text:#ffff;
 
+$section-padding: 6rem;
+$section-margin: 2rem;
+
+
 @mixin header-icon($header:false,$footer:false){
     @if $header {
         color: black;

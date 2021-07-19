@@ -1,9 +1,8 @@
-$accentcolor: #ffc006;
 
 
 
 footer{
-    border-top: solid $accentcolor 3rem;
+    border-top: solid $accent-color 3rem;
     background-color: black;
     
     padding: 2rem;
@@ -19,32 +18,30 @@ footer{
    svg{
        margin: 10px;
    }
+
+   h4{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+ul{
+    list-style: none;
+    text-align: center;
+    
+}
+
+a{
+    text-decoration: none;
+    color: #ffffffa3; 
+}
+
 }
 
 
 
-footer {
-    h4{
-        text-align: center;
-        margin-bottom: 1rem;
-    }
+.footer{
 
-    ul{
-        list-style: none;
-        text-align: center;
-        
-    }
-
-    a{
-        text-decoration: none;
-        color: #ffffffa3; 
-    }
-}
-
-
-
-
-.footer-logo{
+&-logo{
     padding: 1rem;
     margin: auto;
     margin-bottom: 2rem;
@@ -53,7 +50,7 @@ footer {
     
 }
 
-.footer-lists{
+&-lists{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -62,6 +59,11 @@ footer {
         margin-bottom: 1.7rem;
     }
 }
+}
+
+
+
+
 
 @media only screen and (max-width: $small){
     footer {
@@ -85,24 +87,31 @@ footer {
             letter-spacing: 1px; 
         }
 
-        .footer-nav{
-            margin-bottom: 2rem;
-            
+        .footer{
+            &-nav{
+                margin-bottom: 2rem;
+                
+            }
+
+            &-logo{
+                width: 100%;
+            }
+
+            &-lists{
+                flex-wrap: wrap;
+            justify-content: center;
+        }
+
+
         }
 
         
     }
 
-    
 
-    .footer-logo{
-        width: 100%;
-    }
+  
 
-    .footer-lists{
-        flex-wrap: wrap;
-    justify-content: center;
-}
+   
     }
 
 
