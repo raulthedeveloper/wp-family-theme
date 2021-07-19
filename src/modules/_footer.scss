@@ -57,6 +57,10 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    div{
+        margin-bottom: 1.7rem;
+    }
 }
 
 @media only screen and (max-width: $small){

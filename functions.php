@@ -99,7 +99,9 @@ register_nav_menus(
         'mobile-menu' => 'Mobile Menu Location',
         'footer-col-1' => 'Footer Column 1',
         'footer-col-2' => 'Footer Column 2',
-        'footer-col-3' => 'Footer Column 3'
+        'footer-col-3' => 'Footer Column 3',
+        'footer-col-4' => 'Footer Column 4',
+        'footer-col-5' => 'Footer Column 5'
     )
 );
 
@@ -204,8 +206,6 @@ add_action( 'init', 'my_taxonomy' );
 
 
 /////// Contact Form ////////////
-
-
 function contact_form(){
 
     /////////// Replace nonce info for you website to prevent security issues ///////////////

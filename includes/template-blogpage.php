@@ -23,16 +23,18 @@ Template Name:Blog Page
         foreach( $recent_posts as $post_item ) : 
         ?>
 
+           
             <!-- checks if thumbnail exist, if not add default image -->
             <?php templateFeaturedImage(get_the_post_thumbnail($post_item['ID'],'blog-large')) ?>
 
-
+            
 
 
             <?php endforeach?>
 
             <div class="latest-post-text-box text-light">
                 <h2 class="text-light"><?php echo $post_item['post_title'] ?></h2>
+                <p id="feature-date"></p>
                 <p><?php echo get_the_excerpt($post_item['ID']); ?></p>
                 <a type="button" href="<?php echo get_permalink($post_item['ID']) ?>" class="btn btn-success">Read
                     More
@@ -42,7 +44,7 @@ Template Name:Blog Page
 
         </div>
 
-
+            <!-- Column holds sidebars from wp widgets -->
         <div class="col-md-4 col-sm-12 flex-column d-flex justify-content-between">
             <?php if(is_active_sidebar( 'blog-sidebar' )): ?>
             <?php dynamic_sidebar( 'blog-sidebar' ); ?>
@@ -147,17 +149,20 @@ Template Name:Blog Page
 
 
         /////// Calls Out to WP REST for AJAX //////////////////////
+        //Get 6 most recent post minus the newest post
         function wpApiCall() {
 
-            $.get(homeUrl + '/wp-json/wp/v2/posts?per_page=6&page=' + pageNumber,
+            $.get(homeUrl + '/wp-json/wp/v2/posts?per_page=7&page=' + pageNumber,
                 function (data) {
+                    // Iterates through post api and uses Jquery to output post into cards
+                    data.forEach((e,index) => {
+                         // Skips first post so the featured post isnt show the recent post section   
+                        if(index === 0){
+                            // Formats date for featured image ex. Jun 26, 2021
+                            $('#feature-date').append(`${convertToMonth( e.date.slice(5,7))} ${e.date.slice(8,10)}, ${e.date.slice(0,4)}`)
+                            return
 
-
-
-
-                    data.forEach(e => {
-
-
+                        };
 
                         const yellowBox =
                             `<div class="card-date">${e.date.slice(8,10)}<hr><div><span>${convertToMonth(e.date.slice(5,7))}</span><span>${e.date.slice(0,4)}</span></div>`

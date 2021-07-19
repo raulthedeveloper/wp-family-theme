@@ -159,6 +159,9 @@ footer a {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+.footer-lists div {
+  margin-bottom: 1.7rem;
+}
 
 @media only screen and (max-width: 575px) {
   footer h4 {
@@ -255,15 +258,16 @@ footer a {
   height: 3px;
 }
 
+.social-media-container svg {
+  color: #ffbd21;
+}
+
 .social-media-icons:hover {
   fill: #bd8c18;
 }
 
 .employee-image a {
   text-decoration: none;
-}
-.employee-image:hover {
-  filter: brightness(0.7);
 }
 .employee-image h3 {
   color: rgba(240, 240, 240, 0.562);
