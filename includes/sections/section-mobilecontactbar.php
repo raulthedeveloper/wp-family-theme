@@ -20,7 +20,7 @@ if ( $the_query->have_posts() ): ?>
     ?>
 
 
-<div class="bg-warning p-1" id="mobile-top-contact">
+<div class="p-1" id="mobile-top-contact">
     <div>
         <?php
                 $iconsize = "30";

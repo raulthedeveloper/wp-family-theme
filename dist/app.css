@@ -28,6 +28,10 @@
   text-align: center;
 }
 
+#wp-calendar {
+  width: 100%;
+}
+
 .header-contact {
   margin-right: 1rem;
 }
@@ -35,8 +39,25 @@
   font-weight: bold;
 }
 
+.main-headliner {
+  margin: auto;
+  color: white;
+  letter-spacing: 10px;
+  text-align: center;
+  font-size: 12vw;
+}
+
+.secondary-headliner {
+  margin: auto;
+  color: white;
+  letter-spacing: 10px;
+  text-align: center;
+  font-size: 8vw;
+  font-weight: 200;
+}
+
 .secondary-header {
-  background-color: black;
+  background-color: #162d48;
   margin-bottom: 6rem;
   padding-bottom: 0;
   padding: 2rem;
@@ -48,7 +69,7 @@
 }
 
 .secondary-nav {
-  background-color: #ffbd21;
+  background-color: #4c93e7;
   color: white;
   position: relative;
   top: 4rem;
@@ -78,13 +99,26 @@
 
 #top-contact {
   padding: 0.2rem;
+  background: #4c93e7;
 }
 
 #mobile-top-contact {
   display: none;
 }
 
+.tag-line {
+  font-weight: 200;
+}
+
 @media only screen and (max-width: 767px) {
+  .main-headliner {
+    font-size: 13vw;
+  }
+
+  .secondary-headliner {
+    font-size: 13vw;
+  }
+
   .secondary-header {
     margin-bottom: 0;
   }
@@ -125,9 +159,14 @@
     margin-top: 1rem;
   }
 }
+@media only screen and (max-width: 575px) {
+  .tag-line {
+    font-size: 5vw;
+  }
+}
 footer {
-  border-top: solid #ffbd21 3rem;
-  background-color: black;
+  border-top: solid #4c93e7 3rem;
+  background-color: #162d48;
   padding: 2rem;
   margin-top: 3rem;
   display: flex;
@@ -241,7 +280,7 @@ footer a {
   left: 16px;
   top: 178px;
   z-index: 1000;
-  background-color: #ffc006;
+  background-color: #4c93e7;
   color: #5a5a5a;
   font-weight: bold;
   font-size: 1.5rem;
@@ -262,7 +301,7 @@ footer a {
 }
 
 .social-media-container svg {
-  color: #ffbd21;
+  color: #4c93e7;
 }
 
 .social-media-icons:hover {
@@ -327,14 +366,14 @@ footer a {
 }
 
 #submit {
-  background-color: #ffbd21;
+  background-color: grey;
   width: 10rem;
   border: none;
   padding: 0.5rem;
 }
 
 #submit:hover {
-  background-color: #ffb300;
+  background-color: grey;
 }
 
 .contact-squares {
@@ -352,7 +391,7 @@ footer a {
 }
 
 .contact-box {
-  background-color: #ffc006;
+  background-color: #4c93e7;
   margin-bottom: 1rem;
   padding: 1rem;
   text-align: center;
@@ -423,7 +462,8 @@ footer a {
   }
 }
 .tribe-common .tribe-common-c-btn, .tribe-common a.tribe-common-c-btn {
-  background-color: #ffb300;
+  background-color: #162d48;
+  color: white;
 }
 
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
@@ -656,12 +696,13 @@ section {
 }
 
 .site-button {
-  background-color: #ffbd21;
+  background-color: #162d48;
   width: 10rem;
+  color: white;
 }
 
 .site-button:hover {
-  background-color: #ffbd21;
+  background-color: #4c93e7;
 }
 
 .nav-link {
@@ -700,7 +741,7 @@ section {
   justify-content: space-evenly;
   padding: 1rem;
   background: #f3f3f3;
-  border-bottom: 10px solid #ffbd21;
+  border-bottom: 10px solid #4c93e7;
 }
 
 .card-img {
@@ -738,7 +779,7 @@ section {
 }
 
 .contact-box {
-  background-color: #ffbd21;
+  background-color: #4c93e7;
   padding: 1rem;
   text-align: center;
   font-size: 1.5rem;
@@ -761,13 +802,13 @@ section {
 
 .readmore-link {
   text-align: center;
-  background: #fec002;
+  background: #4c93e7;
   color: black;
   padding: 3rem;
   font-size: 2rem;
 }
 .readmore-link:hover {
-  background-color: #ce9c04;
+  background-color: grey;
 }
 
 .comment-body {
@@ -785,7 +826,7 @@ section {
 
 .raul {
   text-decoration: none;
-  color: #ffbd21;
+  color: #4c93e7;
   font-size: 1.3rem;
   letter-spacing: 5px;
 }
@@ -798,6 +839,10 @@ section {
     height: 280px;
   }
 }
+#mobile-top-contact {
+  background-color: #4c93e7;
+}
+
 @media only screen and (max-width: 767px) {
   /*Small smartphones [325px -> 425px]*/
   #mobile-top-contact {

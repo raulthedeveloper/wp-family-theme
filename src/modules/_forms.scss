@@ -14,14 +14,14 @@
 }
 
 #submit{
-    background-color: #ffbd21;
+    background-color: $secondary-color;
     width: 10rem;
     border: none;
     padding: .5rem;
 }
 
 #submit:hover{
-    background-color: #ffb300;
+    background-color: $secondary-color;
 }
 
 .contact-squares{
@@ -44,7 +44,7 @@
 
 
 .contact-box{
-    background-color: #ffc006;
+    background-color: $primary-color;
     margin-bottom: 1rem;
     padding: 1rem;
     text-align: center;

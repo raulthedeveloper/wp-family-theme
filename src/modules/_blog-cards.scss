@@ -49,7 +49,7 @@
     left: 16px;
     top: 178px;
     z-index: 1000;
-    background-color: #ffc006;
+    background-color: $primary-color;
     color: #5a5a5a;
     font-weight: bold;
     font-size: 1.5rem;
@@ -73,7 +73,7 @@
 }
 
 .social-media-container svg{
-    color: $accent-color;
+    color: $primary-color;
 }
 
 

@@ -2,11 +2,11 @@
 
 
 .hero{
-    background: linear-gradient(#1d1d1e8c, #02020270, transparent), url("../images/hero-image.jpeg");
+    background: linear-gradient(#1d1d1e8c, #02020270, transparent), url("../images/scenery.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 80vh;
     padding-top: 0;
 }
 

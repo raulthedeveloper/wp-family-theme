@@ -81,12 +81,14 @@ section{
 
 
 .site-button{
-    background-color: $accent-color;
+    background-color: $trinary-color;
     width: 10rem;
+    color: $text-color;
 }
 
 .site-button:hover{
-    background-color: $accent-color;
+    background-color: $primary-color;
+   
 }
 
  
@@ -140,7 +142,7 @@ section{
     justify-content: space-evenly;
     padding: 1rem;
     background: #f3f3f3;
-    border-bottom: 10px solid #ffbd21;
+    border-bottom: 10px solid $primary-color;
 }
 
 
@@ -190,7 +192,7 @@ padding-left: 0;
 }
 
 .contact-box{
-    background-color: $accent-color;
+    background-color: $primary-color;
 
     padding: 1rem;
     text-align: center;
@@ -220,14 +222,14 @@ padding-left: 0;
 
 .readmore-link{
     text-align: center;
-    background: #fec002;
+    background: $primary-color;
     color: black;
     padding: 3rem;
     font-size: 2rem;
     // border-radius: 100%;
 
     &:hover{
-        background-color: #ce9c04;
+        background-color: $secondary-color;
     }
 
 
@@ -259,7 +261,7 @@ padding-left: 0;
 
 .raul{
     text-decoration: none;
-    color: $accent-color;
+    color: $primary-color;
     font-size: 1.3rem;
     letter-spacing: 5px;
 
@@ -280,7 +282,9 @@ padding-left: 0;
     }
 }
 
-
+#mobile-top-contact{
+    background-color: $primary-color;
+}
 
 @media only screen and (max-width: $medium){
 	/*Small smartphones [325px -> 425px]*/

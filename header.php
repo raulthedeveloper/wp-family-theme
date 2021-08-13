@@ -7,8 +7,10 @@
     <!-- Mobile Navigation -->
     <?php get_template_part('includes/sections/section','navbar'); ?>
 
-    <img class="img-fluid" src="<?php echo get_template_directory_uri(). '/images/Firstbondlogo.png' ?>" alt="">
-
+    <!-- <img class="img-fluid" src="<?php 
+    // echo get_template_directory_uri(). '/images/Firstbondlogo.png' 
+    ?>" alt=""> -->
+              <h1 class="secondary-headliner"><?php echo the_title() ?></h1>
     <!-- Desktop Navigation -->
     <nav class="navbar navbar-expand-md navbar-light secondary-nav" role="navigation">
   <div class="container">

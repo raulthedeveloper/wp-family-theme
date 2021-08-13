@@ -21,7 +21,7 @@ if ( $the_query->have_posts() ): ?>
 
 <?php if(get_field('business_instagram') || get_field('business_facebook') || get_field('business_linkdin') || get_field('business_phone') || get_field('business_email')): ?>
 
-<div class="bg-warning" id="top-contact">
+<div  id="top-contact">
     <div class="d-flex justify-content-between">
         <?php
                 $iconsize = "30";

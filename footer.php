@@ -14,7 +14,7 @@ $args = array(
 
         <div class="row">
             <img class="footer-logo" width="200"
-                src="<?php echo get_template_directory_uri() . "/images/Firstbondlogo.png" ?>"
+                src="<?php echo get_template_directory_uri() . "/images/yourcompany.png" ?>"
                 alt="the first bond logo">
         </div>
 
